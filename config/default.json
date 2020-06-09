@@ -1,0 +1,5 @@
+{
+    "mongoURI":"mongodb+srv://johanLight333:johanLight333@ddc-y1mjt.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "JDhfjdsjjdsfdj24545djsfdfdjd453jjdsjje"
+
+}
