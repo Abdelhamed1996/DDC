@@ -1,0 +1,59 @@
+body {
+    background-color: #42A5F5 !important;
+}
+
+.nav-link {
+
+    border: 1px solid rgb(243, 243, 243) !important;
+    border-radius: 10px !important;
+    margin: 10px;
+    font-weight: bold;
+
+}
+
+.navbar {
+    background-color: #42A5F5 !important;
+}
+
+.landing-page {
+    background-color: #42A5F5 !important;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    height: 100%;
+}
+
+.text {
+    margin-top: 100px;
+
+}
+
+.p-text {
+    font-size: 20px;
+
+}
+
+.card {
+    width: 450px;
+    height: 500px;
+    border-radius: 10px !important;
+    position: absolute;
+    top: 100px;
+    margin: 0 auto !important;
+
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .card {
+        width: auto;
+        height: 550px;
+        border-radius: 0px !important;
+    }
+}
