@@ -8,16 +8,15 @@ import { FacebookLoginButton } from 'react-social-login-buttons';
 
 
     return (
-
         <Navbar light expand="md">
             <NavbarToggler />
             <Collapse  navbar>
                 <Nav className="ml-auto" navbar>
                     <NavItem>
-                        <NavLink href="/components/">Sign Up</NavLink>
+                        <NavLink href="#">Sign Up</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="https://github.com/reactstrap/reactstrap">Login</NavLink>
+                        <NavLink href="#">Login</NavLink>
                     </NavItem>
                 </Nav>
             </Collapse>
