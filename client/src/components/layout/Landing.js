@@ -12,22 +12,7 @@ export const Landing = (props) => {
     const toggle = () => setIsOpen(!isOpen);
 
     return (
-        <div className="landing-page primary bg">
-            <Navbar light expand="md">
-                <NavbarToggler onClick={toggle} />
-                <Collapse isOpen={isOpen} navbar>
-                    <Nav className="ml-auto" navbar>
-                        <NavItem>
-                            <NavLink href="/components/">Sign Up</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="https://github.com/reactstrap/reactstrap">Login</NavLink>
-                        </NavItem>
-                    </Nav>
-                </Collapse>
-            </Navbar>
-
-
+            <>
             <div className="text text-center text-white display-4 font-weight-bold">DCI Developer Community</div>
             <p className="p-text text-center text-white mt-3">Create a developer portfolio, share posts and get help from other developers</p>
             <div className="card">
@@ -52,7 +37,8 @@ export const Landing = (props) => {
                     </div>
                 </Form>
             </div>
-        </div>
+        </>
     );
 }
 
+export default Landing

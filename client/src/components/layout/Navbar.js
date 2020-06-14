@@ -4,16 +4,14 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { FacebookLoginButton } from 'react-social-login-buttons';
 
 
- const Navbar = (props) => {
-    const [isOpen, setIsOpen] = useState(false);
+ const Navbar1 = (props) => {
 
-    const toggle = () => setIsOpen(!isOpen);
 
     return (
 
         <Navbar light expand="md">
-            <NavbarToggler onClick={toggle} />
-            <Collapse isOpen={isOpen} navbar>
+            <NavbarToggler />
+            <Collapse  navbar>
                 <Nav className="ml-auto" navbar>
                     <NavItem>
                         <NavLink href="/components/">Sign Up</NavLink>
@@ -26,3 +24,5 @@ import { FacebookLoginButton } from 'react-social-login-buttons';
         </Navbar>
     );
 };
+
+export default Navbar1

@@ -1,12 +1,18 @@
 import React from 'react';
-import { Landing } from './components/layout/Landing';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import './App.css';
+import Navbar from './components/layout/Navbar'
+import Landing from './components/layout/Landing'
 
 const App = () => {
   return (
-    <React.Fragment>
+
+    <>
+      <Navbar />
       <Landing />
-    </React.Fragment>
+    </>
+
   );
 }
 
