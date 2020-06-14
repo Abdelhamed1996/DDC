@@ -57,3 +57,11 @@ body {
         border-radius: 0px !important;
     }
 }
+
+
+.logoDD{
+    position: absolute;
+    width: 245px;
+    height: 327px;
+    top:67px
+}

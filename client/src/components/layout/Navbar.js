@@ -4,7 +4,7 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { FacebookLoginButton } from 'react-social-login-buttons';
 
 
- const Navbar1 = (props) => {
+ const Navbar1 = () => {
 
 
     return (

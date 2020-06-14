@@ -2,19 +2,18 @@ import React, { useState } from 'react';
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink, } from 'reactstrap';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { FacebookLoginButton } from 'react-social-login-buttons';
-
+import '../../../src/App.css'
 
 
 
 export const Landing = (props) => {
-    const [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => setIsOpen(!isOpen);
 
     return (
             <>
             <div className="text text-center text-white display-4 font-weight-bold">DCI Developer Community</div>
             <p className="p-text text-center text-white mt-3">Create a developer portfolio, share posts and get help from other developers</p>
+            <img  className="logoDD" src="../../DDC-8.png"/>
             <div className="card">
                 <Form className="login-form">
                     <h1 className="text-center font-weight-bolder ">
