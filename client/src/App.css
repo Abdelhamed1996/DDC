@@ -45,7 +45,9 @@ body {
     top: 100px;
     margin: 0 auto !important;
 
+
 }
+
 
 
 
@@ -56,4 +58,12 @@ body {
         height: 550px;
         border-radius: 0px !important;
     }
+}
+
+
+.logoDD {
+    position: absolute;
+    width: 245px;
+    height: 327px;
+    top: 67px
 }
