@@ -12,7 +12,6 @@ export const Landing = (props) => {
         <>
             <div className="text text-center text-white display-4 font-weight-bold">DCI Developer Community</div>
             <p className="p-text text-center text-white mt-3">Create a developer portfolio, share posts and get help from other developers</p>
-
             <div className="card">
                 <Form className="login-form">
                     <h1 className="text-center font-weight-bolder ">
