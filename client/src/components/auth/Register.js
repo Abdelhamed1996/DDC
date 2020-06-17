@@ -20,7 +20,7 @@ const Register = () => {
         if (password !== password2) {
             console.log('Passwords do not match');
         } else {
-            console.log(formData);
+            console.log('Success');
         }
     };
 
@@ -28,13 +28,13 @@ const Register = () => {
     return (
         <>
             <div className="card card-register mt-5">
-                <Form className="login-form p-0" onSubmit={onSubmit}>
+                <Form className="login-form-register p-0" onSubmit={onSubmit}>
                     <h1 className="text-center font-weight-bolder pb-4 pt-4">
                         <span className="text-center">Sign in</span>
-                        <h6 clasName="text-center">Create your account</h6>
+                        <h6 clasName="text-center" >Create your account</h6>
                     </h1>
                     <FormGroup>
-                        <Input
+                        <Input className="input-register"
                             type="text"
                             placeholder="Name"
                             name="name"
@@ -59,13 +59,13 @@ const Register = () => {
                             onChange={onChange} />
                     </FormGroup>
                     <FormGroup>
-                        <Input ttype="password"
+                        <Input type="password"
                             placeholder="Confirm Password"
                             name="password2"
                             value={password2}
                             onChange={onChange} />
                     </FormGroup>
-                    <Button className="wow mt-4" color="primary" size="lg" block>Register</Button>{' '}
+                    <Button className="wow-register mt-4  d-flex justify-content-center" color="primary" size="lg" block>Register</Button>{' '}
                     <div className="text-center pt-3">Your continue social media account</div>
                     <div className="text-center"><a href="/sign-up">Sign up</a>
                         <span className="p-2">|</span>

@@ -21,10 +21,24 @@ body {
 
 .login-form {
     width: 100%;
-    max-width: 330px;
+    max-width: 20rem;
     padding: 15px;
     margin: auto;
     height: 100%;
+}
+
+.login-form-register {
+    width: 100%;
+    max-width: 40rem;
+    padding: 15px;
+    margin: auto;
+    height: 100%;
+
+}
+
+.btn.wow-register {
+    width: 35%;
+    margin: auto;
 }
 
 .text {
@@ -38,15 +52,31 @@ body {
 }
 
 .card {
-    width: 450px;
-    height: 500px;
+    width: 30rem;
+    height: 30rem;
     border-radius: 10px !important;
     position: absolute;
     top: 100px;
     margin: 0 auto !important;
 
+}
+
+.card.card-register {
+
+    width: 50rem;
+    height: 35rem;
+    border-radius: 10px !important;
+    position: relative;
+    top: 100px;
+    margin: 0 auto !important;
+    padding-top: 2rem;
 
 }
+
+.form-control{
+    background-color: rgb(245, 245, 245)!important;
+}
+
 
 
 
@@ -59,5 +89,3 @@ body {
         border-radius: 0px !important;
     }
 }
-
-
