@@ -21,10 +21,24 @@ body {
 
 .login-form {
     width: 100%;
-    max-width: 330px;
+    max-width: 20rem;
     padding: 15px;
     margin: auto;
     height: auto;
+}
+
+.login-form-register {
+    width: 100%;
+    max-width: 40rem;
+    padding: 15px;
+    margin: auto;
+    height: 100%;
+
+}
+
+.btn.wow-register {
+    width: 35%;
+    margin: auto;
 }
 
 .text {
