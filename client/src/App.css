@@ -24,7 +24,7 @@ body {
     max-width: 330px;
     padding: 15px;
     margin: auto;
-    height: 100%;
+    height: auto;
 }
 
 .text {
@@ -37,27 +37,82 @@ body {
 
 }
 
-.card {
-    width: 450px;
-    height: 500px;
-    border-radius: 10px !important;
-    position: absolute;
-    top: 100px;
-    margin: 0 auto !important;
+.Form1{
+    background: white;
 
+    margin: auto;
+}
 
+.text-center{
+    margin: auto;
+    text-align: center;
+}
+.mar-5hv{
+    margin: 5vh ;
 }
 
 
+.respnsiv_form{
 
+    max-width:  45%;
 
+}
 
-@media only screen and (max-width: 600px) {
-    .card {
-        width: auto;
-        height: 550px;
-        border-radius: 0px !important;
+@media   (max-width: 500px) {
+    .respnsiv_form  {
+
+        max-width:  90%;
+
     }
 }
 
+.respnsiv_form2{
+
+    max-width:  60%;
+
+}
+
+@media   (max-width: 500px) {
+    .respnsiv_form2  {
+
+        max-width:  90%;
+
+    }
+}
+@media   (max-width: 1000px) {
+    .respnsiv_form3  {
+
+        max-width:  60%;
+
+    }
+}
+
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    justify-content: flex-end;
+}}
+
+.nav-link{
+    border: none;
+}
+
+.logo_size{
+    width: 70px;
+    margin: 0;
+    padding: 0;
+}
+
+.NavLink{
+    color: white;
+    text-decoration: none;
+}
+
+.active{
+    border: solid white 1px;
+    padding: 10px;
+    margin: -10px;
+    border-radius: 15px;
+}
 
