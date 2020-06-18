@@ -1,6 +1,6 @@
 import React from 'react';
-import {Link, NavLink} from 'react-router-dom'
-import { Nav, Navbar, NavDropdown,  } from 'react-bootstrap';
+import { NavLink} from 'react-router-dom'
+import { Nav, Navbar,  } from 'react-bootstrap';
 import Src from '../../images/DDC-8.png'
 
 const Navbar1 = (props) => {
@@ -10,7 +10,7 @@ const Navbar1 = (props) => {
 
     return (
         <Navbar collapseOnSelect expand="lg"  >
-            <Navbar.Brand href="/"><img src={Src} className="logo_size" /></Navbar.Brand>
+            <Navbar.Brand href="/"><img src={Src} className="logo_size" alt="logo"/></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav"  >
                 <Nav>
