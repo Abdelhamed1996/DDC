@@ -26,7 +26,7 @@ const Login = (props) => {
             <div className="text text-center text-white display-4 font-weight-bold">DCI Developer Community</div>
             <p className="p-text text-center text-white mt-3 mar-5hv">Create a developer portfolio, share posts and get help from other developers</p>
             <Form className=" Form1 p-3 m-auto respnsiv_form respnsiv_form3 rounded" onSubmit={onSubmit}>
-                <h1 className="text-center mar-5hv">Sign in</h1>
+                <h1 className="text-center mt-5 mb-4">Sign in</h1>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control 

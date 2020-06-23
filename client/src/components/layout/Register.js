@@ -30,21 +30,21 @@ const Register = () => {
     return (
         <>
             <Form className=" Form1 p-3 mt-5 respnsiv_form2  respnsiv_form3 rounded " onSubmit={onSubmit}>
-                <h1 className="text-center mar-5hv">Sign Up</h1>
+                <h1 className="text-center mt-5 mb-3">Sign Up</h1>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
-                    <Form.Control 
-                    type="text" 
-                    placeholder="Enter Name" 
-                    name="name"                             
+                    <Form.Control
+                    type="text"
+                    placeholder="Enter Name"
+                    name="name"
                     value={name}
                     onChange={onChange}
                     />
                 </Form.Group>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control 
-                    type="email" 
+                    <Form.Control
+                    type="email"
                     placeholder="Enter email"
                     name="email"
                     value={email}
@@ -76,7 +76,7 @@ const Register = () => {
                     <Link to="/login">do you have allready an account?</Link>
                 </Form.Group>
                 <Form.Group controlId="formBasicCheckbox" className="d-flex justify-content-center">
-                <Button variant="primary" type="submit" >
+                <Button variant="primary mb-3" type="submit" >
                     Submit
                 </Button>
                 </Form.Group>
