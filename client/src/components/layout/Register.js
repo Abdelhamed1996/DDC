@@ -1,11 +1,12 @@
 import React,{ useState } from 'react';
 import{Form,Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
+import {connect} from 'react-redux'
+import {register} from '../../actions/auth'
+import {Redirect} from 'react-router-dom'
 
 
-
-
-const Register = () => {
+const Register = props => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -23,9 +24,14 @@ const Register = () => {
         if (password !== password2) {
             console.log('Passwords do not match');
         } else {
-            console.log(formData);
+            props.register({name, email, password})
         }
     };
+
+    if(props.isAuhtenticated){
+        return <Redirect to="/dashboard"/>
+   }
+
 
     return (
         <>
@@ -86,4 +92,8 @@ const Register = () => {
     );
 }
 
-export default Register
+const mapStateToProps= state=>({
+    isAuhtenticated: state.auth.isAuhtenticated
+})
+
+export default connect(mapStateToProps,{register})(Register)

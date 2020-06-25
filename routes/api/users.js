@@ -6,7 +6,7 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const User = require('../../models/User')
 const config = require('config')
-
+const normalize = require('normalize-url');
 
 //   POST /users
 
@@ -19,7 +19,7 @@ check('name','Name is required')
 check('email','Email is required')
 .isEmail(),
 check('password','Password is required')
-.isLength({min:7})
+.isLength({min:6})
 ],
 async (req,res)=> {
     const errors = validationResult(req);
@@ -39,11 +39,14 @@ async (req,res)=> {
 
 
     // Get users gravatart
-        const avatar = gravatar.url(email,{
+        const avatar = normalize(
+            gravatar.url(email,{
             s:'200',
             r: 'pg',
             d: 'mm'
-        })
+            }),
+            { forceHttps: true }
+        );
 
         user = new User({
             name,
@@ -80,9 +83,6 @@ async (req,res)=> {
         console.log(err.message);
         res.status(500).send('server Errore')
     }
-
-
-
 })
 
 module.exports = router

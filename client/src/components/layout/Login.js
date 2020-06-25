@@ -1,12 +1,15 @@
+
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap'
-import Image from 'react-bootstrap/Image'
-import Src from '../../images/man 7.png'
+import { connect } from 'react-redux'
+import { login } from '../../actions/auth'
+import { Redirect } from 'react-router-dom'
 
 
 
 
-const Login = (props) => {
+
+const Login = props => {
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -19,8 +22,12 @@ const Login = (props) => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        console.log('Success');
+        props.login(email, password)
     };
+
+    if (props.isAuhtenticated) {
+        return <Redirect to="/dashboard" />
+    }
 
 
     return (
@@ -28,9 +35,6 @@ const Login = (props) => {
             <div className="text text-center text-white display-4 font-weight-bold">DCI Developer Community</div>
             <p className="p-text text-center text-white mt-3 mar-5hv">Create a developer portfolio, share posts and get help from other developers</p>
             <Form className=" Form1 p-3 m-auto respnsiv_form respnsiv_form3 rounded" onSubmit={onSubmit}>
-                <div class=" card-img text-center ">
-                    <Image className="login-head" src="href=" img src={Src} className="logo_size p-2  border border-dark" roundedCircle />
-                </div>
                 <h1 className="text-center mt-5 mb-4">Sign in</h1>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -67,4 +71,8 @@ const Login = (props) => {
     );
 }
 
-export default Login
+const mapStateToProps = state => ({
+    isAuhtenticated: state.auth.isAuhtenticated
+})
+
+export default connect(mapStateToProps, { login })(Login)
