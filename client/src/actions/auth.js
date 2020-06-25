@@ -79,5 +79,10 @@ export   const login=(email, password)=> async dispatch =>{
 
 
 export const logout =()=> dispatch=>{
-    dispatch({type:LOGOUT})
+    if (window.confirm("Do you want to logout?")) {
+        dispatch({type:LOGOUT})
+      }
+
+    
+
 }
