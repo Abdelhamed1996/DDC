@@ -1,5 +1,7 @@
-import React ,{useState}from 'react';
-import{Form,Button } from 'react-bootstrap'
+import React, { useState } from 'react';
+import { Form, Button } from 'react-bootstrap'
+import Image from 'react-bootstrap/Image'
+import Src from '../../images/man 7.png'
 
 
 
@@ -26,34 +28,37 @@ const Login = (props) => {
             <div className="text text-center text-white display-4 font-weight-bold">DCI Developer Community</div>
             <p className="p-text text-center text-white mt-3 mar-5hv">Create a developer portfolio, share posts and get help from other developers</p>
             <Form className=" Form1 p-3 m-auto respnsiv_form respnsiv_form3 rounded" onSubmit={onSubmit}>
+                <div class=" card-img text-center ">
+                    <Image className="login-head" src="href=" img src={Src} className="logo_size p-2  border border-dark" roundedCircle />
+                </div>
                 <h1 className="text-center mt-5 mb-4">Sign in</h1>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control 
-                    type="email"
-                    placeholder="Email Address"
-                    name="email"
-                    value={email}
-                    onChange={onChange} 
+                    <Form.Control
+                        type="email"
+                        placeholder="Email Address"
+                        name="email"
+                        value={email}
+                        onChange={onChange}
                     />
                 </Form.Group>
 
                 <Form.Group controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control 
+                    <Form.Control
                         type="password"
                         placeholder="Password"
                         name="password"
                         value={password}
                         onChange={onChange}
-                        />
+                    />
                 </Form.Group>
                 <Form.Group controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Show password" />
                 </Form.Group>
                 <Form.Group controlId="formBasicCheckbox" className="d-flex justify-content-center">
-                <Button variant="primary" type="submit" >
-                    Submit
+                    <Button variant="primary" type="submit" >
+                        Submit
                 </Button>
                 </Form.Group>
 
