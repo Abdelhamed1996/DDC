@@ -6,7 +6,8 @@ import {
      USER_LOADED,
      AUTH_ERROR,
     LOGIN_SUCCESS,
-    LOGIN_FAIL
+    LOGIN_FAIL,
+    LOGOUT
 } from './types'
 
 
@@ -72,5 +73,15 @@ export   const login=(email, password)=> async dispatch =>{
             type: LOGIN_FAIL,
         })
     }
+
+}
+
+
+export const logout =()=> dispatch=>{
+    if (window.confirm("Do you want to logout?")) {
+        dispatch({type:LOGOUT})
+      }
+
+    
 
 }
