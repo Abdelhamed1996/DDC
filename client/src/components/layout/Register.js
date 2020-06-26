@@ -28,9 +28,9 @@ const Register = props => {
         }
     };
 
-    if(props.isAuhtenticated){
-        return <Redirect to="/dashboard"/>
-   }
+    if(props.isAuht){
+        props.history.push('/')
+  }
 
 
     return (
@@ -93,7 +93,7 @@ const Register = props => {
 }
 
 const mapStateToProps= state=>({
-    isAuhtenticated: state.auth.isAuhtenticated
+    isAuht: state.auth.isAuht
 })
 
 export default connect(mapStateToProps,{register})(Register)
