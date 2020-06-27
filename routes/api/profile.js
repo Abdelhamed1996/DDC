@@ -2,7 +2,6 @@ const express = require('express')
 const router = express.Router()
 const auth = require('../../middleware/auth')
 const {check, validationResult}= require('express-validator')
-
 const Profile = require('../../models/Profile')
 const User = require('../../models/User')
 
@@ -26,7 +25,7 @@ router.get('/me', auth, async(req,res)=> {
 
 })
 
-//GET api/profile
+//POST api/profile
 
 
 router.post('/',[

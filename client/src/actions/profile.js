@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 import {GET_PROFILE,PROFILE_ERROR} from './types';
 
 //Get current users profile
@@ -15,8 +14,7 @@ export const getCurrentProfile = () => async dispatch => {
 
     } catch (err) {
         dispatch({
-            type: PROFILE_ERROR,
-            payload: { msg: err.response.statusText, status: err.response.status }
+            type: PROFILE_ERROR
         });
     }
 }

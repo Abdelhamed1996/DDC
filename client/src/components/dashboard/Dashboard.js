@@ -1,32 +1,30 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spiner'
 import { getCurrentProfile } from '../../actions/profile'
 import { Card, Button,} from 'react-bootstrap'
 
 
-const Dashboard = ({
-    getCurrentProfile,
-    auth: { user },
-    profile: { profile, loading }
-}) => {
+const Dashboard = props => {
     useEffect(() => {
-        getCurrentProfile()
+        props.getCurrentProfile()
     }, []);
-    return loading && profile === null ? (<Spinner />) : (<>
+
+    return props.loading && props.profile === null ? (<Spinner />) : (
+    <>
         <Card>
             <Card.Header>Dashboard</Card.Header>
             <Card.Body>
-                <Card.Title>Special title treatment</Card.Title>
                 <Card.Text>
-                    <p>Welcome {user && user.name}</p>
-                    {profile !== null ? (<>has</>
-                    ) : (
-                            <><p>You have not yet setup a profile, please add some info</p>
-                                <Button variant="primary"><Link to='/create-profile'></Link>Create Profile</Button>
-                            </>)}
+                    <p>Welcome {props.user && props.user.name}</p>
+
+                    {props.profile.profile !== null ? (<>has</>) : (
+                    <>
+                        <p>You have not yet setup a profile, please add some info</p>
+                        <Link to='/create-profile'><Button variant="primary">Create Profile</Button></Link>
+                    </>
+                    )}
                 </Card.Text>
             </Card.Body>
         </Card>
@@ -34,11 +32,7 @@ const Dashboard = ({
     );
 };
 
-Dashboard.propTypes = {
-    getCurrentProfile: PropTypes.func.isRequired,
-    auth: PropTypes.object.isRequired,
-    profile: PropTypes.object.isRequired,
-}
+
 
 const mapStateToProps = state => ({
     auth: state.auth,

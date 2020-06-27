@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-import React ,{useState}from 'react';
-import{Form,Button } from 'react-bootstrap'
-import {connect} from 'react-redux'
-import {login} from '../../actions/auth'
-=======
 
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { login } from '../../actions/auth'
 
->>>>>>> 5dd84cea9a5c153c1704c34308166243f77bc846
 
 
 
@@ -34,7 +27,7 @@ const Login = props => {
 
 
      if(props.isAuht){
-          props.history.push('/')
+          props.history.push('/daschboard')
     }
 
     const showPassword = (e) => {
