@@ -27,7 +27,7 @@ const Login = props => {
 
 
      if(props.isAuht){
-          props.history.push('/daschboard')
+          props.history.push('/dashboard')
     }
 
     const showPassword = (e) => {
