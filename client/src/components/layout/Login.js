@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 import React ,{useState}from 'react';
 import{Form,Button } from 'react-bootstrap'
 import {connect} from 'react-redux'
 import {login} from '../../actions/auth'
+=======
+
+import React, { useState } from 'react';
+import { Form, Button } from 'react-bootstrap'
+import { connect } from 'react-redux'
+import { login } from '../../actions/auth'
+
+>>>>>>> 5dd84cea9a5c153c1704c34308166243f77bc846
 
 
 
@@ -20,7 +29,7 @@ const Login = props => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        props.login(email,password)
+        props.login(email, password)
     };
 
 
@@ -46,18 +55,18 @@ const Login = props => {
                 <h1 className="text-center mt-5 mb-4">Sign in</h1>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control 
-                    type="email"
-                    placeholder="Email Address"
-                    name="email"
-                    value={email}
-                    onChange={onChange} 
+                    <Form.Control
+                        type="email"
+                        placeholder="Email Address"
+                        name="email"
+                        value={email}
+                        onChange={onChange}
                     />
                 </Form.Group>
 
                 <Form.Group controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control 
+                    <Form.Control
                         type="password"
                         placeholder="Password"
                         name="password"
@@ -70,8 +79,8 @@ const Login = props => {
                     <Form.Check type="checkbox" label="Show password" onClick={showPassword} />
                 </Form.Group>
                 <Form.Group controlId="formBasicCheckbox" className="d-flex justify-content-center">
-                <Button variant="primary" type="submit" >
-                    Submit
+                    <Button variant="primary" type="submit" >
+                        Submit
                 </Button>
                 </Form.Group>
 
@@ -84,4 +93,4 @@ const mapStateToProps= state=>({
     isAuht: state.auth.isAuht
 })
 
-export default connect(mapStateToProps,{login})(Login)
+export default connect(mapStateToProps, { login })(Login)
