@@ -9,7 +9,7 @@ import { Card, Button,} from 'react-bootstrap'
 const Dashboard = props => {
     useEffect(() => {
         props.getCurrentProfile()
-    }, []);
+    });
 
     return props.loading && props.profile === null ? (<Spinner />) : (
     <>

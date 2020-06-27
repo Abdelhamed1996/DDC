@@ -73,7 +73,7 @@ const Login = props => {
                 </Form.Group>
                 <Form.Group controlId="formBasicCheckbox" className="d-flex justify-content-center">
                     <Button variant="primary" type="submit" >
-                        Submit
+                        Submitt
                 </Button>
                 </Form.Group>
 
