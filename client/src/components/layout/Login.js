@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { login } from '../../actions/auth'
-import { Redirect } from 'react-router-dom'
+
 
 
 
@@ -25,8 +25,18 @@ const Login = props => {
         props.login(email, password)
     };
 
-    if (props.isAuhtenticated) {
-        return <Redirect to="/dashboard" />
+
+     if(props.isAuht){
+          props.history.push('/')
+    }
+
+    const showPassword = (e) => {
+        if (e.target.checked) {
+            document.getElementById('password').type = 'text'
+        }
+        else {
+            document.getElementById('password').type = 'password'
+        }
     }
 
 
@@ -55,10 +65,11 @@ const Login = props => {
                         name="password"
                         value={password}
                         onChange={onChange}
-                    />
+                        id="password"
+                        />
                 </Form.Group>
                 <Form.Group controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Show password" />
+                    <Form.Check type="checkbox" label="Show password" onClick={showPassword} />
                 </Form.Group>
                 <Form.Group controlId="formBasicCheckbox" className="d-flex justify-content-center">
                     <Button variant="primary" type="submit" >
@@ -71,8 +82,8 @@ const Login = props => {
     );
 }
 
-const mapStateToProps = state => ({
-    isAuhtenticated: state.auth.isAuhtenticated
+const mapStateToProps= state=>({
+    isAuht: state.auth.isAuht
 })
 
 export default connect(mapStateToProps, { login })(Login)

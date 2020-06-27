@@ -3,7 +3,7 @@ import{Form,Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux'
 import {register} from '../../actions/auth'
-import {Redirect} from 'react-router-dom'
+
 
 
 const Register = props => {
@@ -28,9 +28,9 @@ const Register = props => {
         }
     };
 
-    if(props.isAuhtenticated){
-        return <Redirect to="/dashboard"/>
-   }
+    if(props.isAuht){
+        props.history.push('/')
+  }
 
 
     return (
@@ -93,7 +93,7 @@ const Register = props => {
 }
 
 const mapStateToProps= state=>({
-    isAuhtenticated: state.auth.isAuhtenticated
+    isAuht: state.auth.isAuht
 })
 
 export default connect(mapStateToProps,{register})(Register)

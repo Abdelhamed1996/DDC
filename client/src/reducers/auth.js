@@ -10,7 +10,7 @@ import{
 
 const initialState ={
     token :localStorage.getItem('token'),
-    isAuthenticated: null,
+    isAuht: null,
     loading: true,
     user: null
 
@@ -23,7 +23,7 @@ export default function(state= initialState, action){
             return{
                 ...state,
                 ...payload,
-                isAuthenticated: true,
+                isAuht: true,
                 loading: false,
                 user:payload
 
@@ -35,7 +35,7 @@ export default function(state= initialState, action){
             return{
                 ...state,
                 ...payload,
-                isAuthenticated: true,
+                isAuht: true,
                 loading:false
             }
 
@@ -48,7 +48,7 @@ export default function(state= initialState, action){
                 ...state,
                 ...payload,
                 token:null,
-                isAuthenticated: false,
+                isAuht: false,
                 loading: false
             }
             default:

@@ -31,7 +31,7 @@ const Navbar1 = (props) => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav"  >
                 <Nav>
-                    {!props.auth.loading &&(props.auth.isAuthenticated ? authLinks : guestLinks)}
+                    {!props.auth.loading &&(props.auth.isAuht ? authLinks : guestLinks)}
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
