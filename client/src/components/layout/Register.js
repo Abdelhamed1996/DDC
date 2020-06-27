@@ -1,8 +1,8 @@
-import React,{ useState } from 'react';
-import{Form,Button } from 'react-bootstrap'
+import React, { useState } from 'react';
+import { Form, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
-import {connect} from 'react-redux'
-import {register} from '../../actions/auth'
+import { connect } from 'react-redux'
+import { register } from '../../actions/auth'
 
 
 
@@ -24,13 +24,13 @@ const Register = props => {
         if (password !== password2) {
             console.log('Passwords do not match');
         } else {
-            props.register({name, email, password})
+            props.register({ name, email, password })
         }
     };
 
-    if(props.isAuht){
-        props.history.push('/')
-  }
+    if (props.isAuht) {
+        props.history.push('/dashboard')
+    }
 
 
     return (
@@ -40,50 +40,50 @@ const Register = props => {
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
                     <Form.Control
-                    type="text"
-                    placeholder="Enter Name"
-                    name="name"
-                    value={name}
-                    onChange={onChange}
+                        type="text"
+                        placeholder="Enter Name"
+                        name="name"
+                        value={name}
+                        onChange={onChange}
                     />
                 </Form.Group>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control
-                    type="email"
-                    placeholder="Enter email"
-                    name="email"
-                    value={email}
-                    onChange={onChange}
-                     />
+                        type="email"
+                        placeholder="Enter email"
+                        name="email"
+                        value={email}
+                        onChange={onChange}
+                    />
                 </Form.Group>
 
                 <Form.Group controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control 
-                    type="password" 
-                    placeholder="Password" 
-                    name="password"
-                    value={password}
-                    onChange={onChange} 
+                    <Form.Control
+                        type="password"
+                        placeholder="Password"
+                        name="password"
+                        value={password}
+                        onChange={onChange}
                     />
                 </Form.Group>
                 <Form.Group controlId="formBasicPassword">
                     <Form.Label>Confirm Password</Form.Label>
-                    <Form.Control 
-                    type="password" 
-                    placeholder=" Confirm Password"
-                    name="password2"
-                    value={password2}
-                    onChange={onChange}
+                    <Form.Control
+                        type="password"
+                        placeholder=" Confirm Password"
+                        name="password2"
+                        value={password2}
+                        onChange={onChange}
                     />
                 </Form.Group>
                 <Form.Group controlId="formBasicCheckbox">
                     <Link to="/login">do you have allready an account?</Link>
                 </Form.Group>
                 <Form.Group controlId="formBasicCheckbox" className="d-flex justify-content-center">
-                <Button variant="primary mb-3" type="submit" >
-                    Submit
+                    <Button variant="primary mb-3" type="submit" >
+                        Submit
                 </Button>
                 </Form.Group>
 
@@ -92,8 +92,8 @@ const Register = props => {
     );
 }
 
-const mapStateToProps= state=>({
+const mapStateToProps = state => ({
     isAuht: state.auth.isAuht
 })
 
-export default connect(mapStateToProps,{register})(Register)
+export default connect(mapStateToProps, { register })(Register)
