@@ -27,7 +27,7 @@ const Login = props => {
 
 
      if(props.isAuht){
-          props.history.push('/daschboard')
+          props.history.push('/dashboard')
     }
 
     const showPassword = (e) => {
@@ -73,7 +73,7 @@ const Login = props => {
                 </Form.Group>
                 <Form.Group controlId="formBasicCheckbox" className="d-flex justify-content-center">
                     <Button variant="primary" type="submit" >
-                        Submitt
+                        Submit
                 </Button>
                 </Form.Group>
 
