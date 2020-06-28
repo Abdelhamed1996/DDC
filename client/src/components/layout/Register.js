@@ -28,9 +28,9 @@ const Register = props => {
         }
     };
 
-    if (props.isAuht) {
+    if(props.isAuht){
         props.history.push('/dashboard')
-    }
+  }
 
 
     return (
