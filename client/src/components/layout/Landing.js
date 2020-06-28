@@ -1,8 +1,11 @@
 import React from 'react';
+import {connect} from 'react-redux'
 
 export const Landing = (props) => {
 
-
+    if(props.isAuht){
+        props.history.push('/dashboard')
+  }
     return (
         <>
             <div className="text text-center text-white display-4 font-weight-bold">DCI Developer Community</div>
@@ -10,6 +13,8 @@ export const Landing = (props) => {
         </>
     );
 }
+const mapStateToProps= state=>({
+    isAuht: state.auth.isAuht
+})
 
-
-export default Landing
+export default connect(mapStateToProps)(Landing)

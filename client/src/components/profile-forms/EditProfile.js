@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
-import {createProfile} from '../../actions/profile'
+import React, { useState , useEffect} from 'react'
+import {createProfile, getCurrentProfile} from '../../actions/profile'
 import { connect } from 'react-redux';
 import { Container, Form, Button, Card } from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import Src from '../fontawesome/twitter-brands.svg'
 
 
-const CreateProfile = props => {
+const EditProfile = props => {
     const [formData, setFormData] = useState({
         company: '',
         website: '',
@@ -34,6 +34,23 @@ const CreateProfile = props => {
         xing,
         instagram
     } = formData;
+
+    useEffect(()=>{
+        props.getCurrentProfile();
+        setFormData({
+            company: props.profile.loading || !props.profile.company ? '' : props.profile.company,
+            website: props.profile.loading || !props.profile.website ? '' : props.profile.website,
+            location: props.profile.loading || !props.profile.location ? '' : props.profile.location,
+            status: props.profile.loading || !props.profile.status ? '' : props.profile.status,
+            skills: props.profile.loading || !props.profile.skills ? '' : props.profile.skills.join(','),
+            githubusername: props.profile.loading || !props.profile.githubusername ? '' : props.profile.githubusername,
+            bio: props.profile.loading || !props.profile.bio ? '' : props.profile.bio,
+            twitter: props.profile.loading || !props.profile.social ? '' : props.profile.twitter,
+            facebook: props.profile.loading || !props.profile.social ? '' : props.profile.facebook,
+            instagram: props.profile.loading || !props.profile.social ? '' : props.profile.instagram,
+            xing: props.profile.loading || !props.profile.social ? '' : props.profile.xing,
+        })
+    },[props.profile.loading])
 
     const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -167,7 +184,10 @@ const CreateProfile = props => {
     )
 }
 
+const mapStateToProps= state=>({
+    profile: state.profile
+})
 
 
 
-export default connect(null,{createProfile})(CreateProfile)
+export default connect(mapStateToProps,{createProfile,getCurrentProfile})(EditProfile)
