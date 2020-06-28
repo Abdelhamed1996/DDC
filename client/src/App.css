@@ -94,7 +94,56 @@ body {
 
 .form-control {
     background-color: rgb(245, 245, 245);
+
 }
+
+/*CARD CARD PROFILE///////////////////////////////*/
+.card-head {
+    padding: 2.5rem;
+    background-color: #EEEEEE !important;
+}
+
+.blue-card {
+    background-color: #42A5F5 !important;
+    height: 8rem;
+}
+
+.text-center.card-r {
+    padding: 2rem !important;
+}
+
+.foto-user {
+    background-color: white !important;
+    border: 1px solid #BAAEAE !important;
+    border-radius: 100%;
+    padding: 1.2rem !important;
+    position: relative;
+    bottom: 5rem;
+    max-width: 10rem;
+    max-height: 10rem;
+}
+
+.profile-form.form-group {
+    padding: 3.5rem !important;
+}
+.profileinput {
+    border: 1px solid #add9fd !important;
+}
+
+.inputplaceholder {
+    color: red !important;
+}
+
+.social-control {
+    border: 1px solid #add9fd !important;
+
+}
+.icons {
+    width: 2rem;
+    height: 2rem;
+}
+
+/*CARD  PROFILE////////////////////////////////*/
 
 @media (max-width: 500px) {
     .respnsiv_form {
@@ -167,12 +216,17 @@ body {
 }
 
 
-@keyframes loaderAnim{
-    from{transform: rotateZ(0deg);}
-    to {transform: rotateZ(360deg)}
+@keyframes loaderAnim {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg)
+    }
 }
 
-.loader{
+.loader {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -182,16 +236,11 @@ body {
 }
 
 
-.profileinput:hover + .inputtext{
+.profileinput:hover+.inputtext {
     opacity: 1;
 }
 
-.inputtext{
+.inputtext {
     opacity: 0;
     margin-bottom: 0.6rem;
-}
-
-.icons{
-    width: 1rem;
-    height: 1rem;
 }
