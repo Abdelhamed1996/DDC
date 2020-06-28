@@ -3,7 +3,8 @@ import {createProfile, getCurrentProfile} from '../../actions/profile'
 import { connect } from 'react-redux';
 import { Container, Form, Button, Card } from 'react-bootstrap'
 import {Link} from 'react-router-dom'
-import Src from '../fontawesome/twitter-brands.svg'
+import profile from '../../reducers/profile';
+
 
 
 const EditProfile = props => {
@@ -38,19 +39,23 @@ const EditProfile = props => {
     useEffect(()=>{
         props.getCurrentProfile();
         setFormData({
-            company: props.profile.loading || !props.profile.company ? '' : props.profile.company,
-            website: props.profile.loading || !props.profile.website ? '' : props.profile.website,
-            location: props.profile.loading || !props.profile.location ? '' : props.profile.location,
-            status: props.profile.loading || !props.profile.status ? '' : props.profile.status,
-            skills: props.profile.loading || !props.profile.skills ? '' : props.profile.skills.join(','),
-            githubusername: props.profile.loading || !props.profile.githubusername ? '' : props.profile.githubusername,
-            bio: props.profile.loading || !props.profile.bio ? '' : props.profile.bio,
-            twitter: props.profile.loading || !props.profile.social ? '' : props.profile.twitter,
-            facebook: props.profile.loading || !props.profile.social ? '' : props.profile.facebook,
-            instagram: props.profile.loading || !props.profile.social ? '' : props.profile.instagram,
-            xing: props.profile.loading || !props.profile.social ? '' : props.profile.xing,
+            company: props.profile.loading || !props.profile.profile.company ? '' : props.profile.profile.company,
+            website: props.profile.loading || !props.profile.profile.website ? '' : props.profile.profile.website,
+            location: props.profile.loading || !props.profile.profile.location ? '' : props.profile.profile.location,
+            status: props.profile.loading || !props.profile.profile.status ? '' : props.profile.profile.status,
+            skills: props.profile.loading || !props.profile.profile.skills ? '' : props.profile.profile.skills.join(','),
+            githubusername: props.profile.loading || !props.profile.profile.githubusername ? '' : props.profile.profile.githubusername,
+            bio: props.profile.loading || !props.profile.profile.bio ? '' : props.profile.profile.bio,
+            twitter: props.profile.loading || !props.profile.profile.social ? '' : props.profile.profile.social.twitter,
+            facebook: props.profile.loading || !props.profile.profile.social ? '' : props.profile.profile.social.facebook,
+            instagram: props.profile.loading || !props.profile.profile.social ? '' : props.profile.profile.social.instagram,
+            xing: props.profile.loading || !props.profile.profile.social ? '' : props.profile.profile.social.xing,
         })
     },[props.profile.loading])
+
+    const objectPath = props.profile
+    console.log(objectPath)
+    
 
     const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -70,7 +75,7 @@ const EditProfile = props => {
                 <Form onSubmit={onSubmit}>
                     <div className="text-center">
                         <h1>Create Your Profile</h1>
-                        <p>get's get some information to make your
+                        <p>let's get some information to make your
                         profile stand out</p>
                     </div>
                     <Form.Group controlId="exampleForm.ControlSelect1">
@@ -153,7 +158,7 @@ const EditProfile = props => {
                               />
                             </div>
                             <div className=" social-input">
-                                <img  src="../fontawesome/3721672-instagram_108066.svg" alt="." className="icons"/>
+
                                 <Form.Control
                                 type="text"
                                 placeholder="Xing URL"

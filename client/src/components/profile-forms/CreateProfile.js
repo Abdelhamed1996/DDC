@@ -53,7 +53,7 @@ const CreateProfile = props => {
                 <Form onSubmit={onSubmit}>
                     <div className="text-center">
                         <h1>Create Your Profile</h1>
-                        <p>get's get some information to make your
+                        <p>let's get some information to make your
                         profile stand out</p>
                     </div>
                     <Form.Group controlId="exampleForm.ControlSelect1">
