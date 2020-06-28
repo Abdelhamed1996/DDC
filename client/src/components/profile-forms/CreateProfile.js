@@ -54,29 +54,6 @@ const CreateProfile = props => {
         <>
             <Container>
                 <Card>
-<<<<<<< HEAD
-                <Form onSubmit={onSubmit}>
-                    <div className="text-center">
-                        <h1>Create Your Profile</h1>
-                        <p>let's get some information to make your
-                        profile stand out</p>
-                    </div>
-                    <Form.Group controlId="exampleForm.ControlSelect1">
-                        <Form.Label>Example select</Form.Label>
-                        <Form.Control as="select" className="profileinput" name="status" value={status} onChange={e=> onChange(e)}>
-                            <option>Select profesional status</option>
-                            <option>Developer</option>
-                            <option>Junior Developer</option>
-                            <option>Senior Developer</option>
-                            <option>Manager</option>
-                            <option>Student of Lerning</option>
-                            <option>Instructor or Teacher</option>
-                            <option>Intern</option>
-                            <option>Other</option>
-                        </Form.Control>
-                        <Form.Text className="text-muted inputtext">
-                            Give us an idea of where you are at in your career
-=======
                     <Form onSubmit={onSubmit}>
                         <div className="text-center card-r">
                             <Card className="card-head">
@@ -107,7 +84,6 @@ const CreateProfile = props => {
                             </Form.Control>
                             <Form.Text className="text-muted inputtext">
                                 Give us an idea of where you are at in your career
->>>>>>> c1dc0657faf7ace8c920b089cba870ccb13d8849
                         </Form.Text>
                             <Form.Control type="text" placeholder="Company" className="profileinput" name="company" value={company} onChange={e => onChange(e)} />
                             <Form.Text className="text-muted inputtext">
