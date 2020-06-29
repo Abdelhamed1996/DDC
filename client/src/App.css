@@ -126,18 +126,16 @@ body {
 .profile-form.form-group {
     padding: 3.5rem !important;
 }
+
 .profileinput {
     border: 1px solid #add9fd !important;
-}
-
-.inputplaceholder {
-    color: red !important;
 }
 
 .social-control {
     border: 1px solid #add9fd !important;
 
 }
+
 .icons {
     width: 2rem;
     height: 2rem;
@@ -154,10 +152,28 @@ body {
         font-size: 2.8rem !important;
     }
 
-
     .form-group {
         padding: 0;
     }
+
+    section.container,
+    div.container {
+        padding: 0;
+        width: 100%;
+    }
+    .text-center.card-r {
+        padding:2rem 0rem 0rem 0rem!important
+    }
+    .card-head{
+        padding:1rem!important;
+    }
+    .blue-card{
+        height:6rem!important;
+    }
+   .profile-form.form-group{
+       padding:1rem!important;
+   }
+
 }
 
 .respnsiv_form2 {

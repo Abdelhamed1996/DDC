@@ -59,7 +59,7 @@ const CreateProfile = props => {
                             <Card className="card-head">
                                 <Card.Body></Card.Body>
                             </Card>
-                            <Card className="blue-card">
+                                <Card className="blue-card">
                                 <Card.Body className="round-user d-flex justify-content-center">
                                     <div className="foto-user d-flex justify-content-centerd-flex align-items-center align-self-center ">
                                         <img src={Img} className="user_size img-fluid" roundedCircle />
