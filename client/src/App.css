@@ -1,6 +1,6 @@
 body {
     background-color: #42A5F5 !important;
-    font-family:'Montserrat';
+    font-family: 'Montserrat';
 }
 
 .nav-link {
@@ -98,7 +98,7 @@ body {
 
 }
 
-/*CARD CARD PROFILE///////////////////////////////*/
+/*CARD CARD CREATE Your PROFILE///////////////////////////////*/
 .card-head {
     padding: 2.5rem;
     background-color: #EEEEEE !important;
@@ -142,7 +142,34 @@ body {
     height: 2rem;
 }
 
-/*CARD  PROFILE////////////////////////////////*/
+/*CARD CARD CREATE Your PROFILE////////////////////////////////*/
+
+/*DCI Student LIST/////////////////////////////////////////////*/
+
+.profiles {
+    background-color: white;
+    padding: 3rem;
+}
+
+.dci-student {
+
+    border: 1px solid #42A5F5;
+    border-radius: 0.6rem;
+    margin-top: 2rem !important;
+    margin: 0.5rem;
+    background-color: #EEEEEE;
+}
+
+.skils-item {
+    text-align: center;
+}
+
+
+
+
+
+
+
 
 @media (max-width: 500px) {
     .respnsiv_form {
@@ -162,18 +189,22 @@ body {
         padding: 0;
         width: 100%;
     }
+
     .text-center.card-r {
-        padding:2rem 0rem 0rem 0rem!important
+        padding: 2rem 0rem 0rem 0rem !important
     }
-    .card-head{
-        padding:1rem!important;
+
+    .card-head {
+        padding: 1rem !important;
     }
-    .blue-card{
-        height:6rem!important;
+
+    .blue-card {
+        height: 6rem !important;
     }
-   .profile-form.form-group{
-       padding:1rem!important;
-   }
+
+    .profile-form.form-group {
+        padding: 1rem !important;
+    }
 
 }
 
@@ -209,6 +240,7 @@ body {
         justify-content: flex-end;
     }
 }
+
 
 .nav-link {
     border: none;
