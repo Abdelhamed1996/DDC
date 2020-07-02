@@ -12,6 +12,7 @@ const Dashboard = props => {
         props.getCurrentProfile()
     },[]);
 
+
   
 
      if(props.profile.loading === true && props.profile===null){return <Spinner />}else {
