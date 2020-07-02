@@ -125,7 +125,9 @@ body {
 }
 
 .profile-form.form-group {
-    padding: 3.5rem !important;
+    padding: 1.5rem 3.5rem 3.5rem 3.5rem !important;
+    
+    
 }
 
 .profileinput {
@@ -141,6 +143,12 @@ body {
     width: 2rem;
     height: 2rem;
 }
+
+.profile-text{
+    text-align:center; 
+    padding-bottom: 1rem;
+}
+
 
 /*CARD CARD CREATE Your PROFILE////////////////////////////////*/
 
@@ -164,10 +172,14 @@ body {
     text-align: center;
 }
 
-
-
-
-
+.rounded-circle{
+    display: block;
+    border:1px solid #C9C9C9;
+    padding:1.3rem;
+   
+    background-color: white;
+    
+}
 
 
 

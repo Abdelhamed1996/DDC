@@ -68,9 +68,8 @@ const CreateProfile = props => {
                             </Card>
                         </div>
                         <Form.Group className="profile-form" controlId="exampleForm.ControlSelect1">
-                            <Form.Label className="text-center">
-                                <span>Create your profile</span>
-                            </Form.Label>
+                            <h2 className="profile-text">Create Your profile</h2>
+                            <p className="profile-text">Let`s get some information to make your profile stand out</p>
                             <Form.Control as="select" className="profileinput" name="status" value={status} onChange={e => onChange(e)}>
                                 <option>Select profesional status</option>
                                 <option>Developer</option>

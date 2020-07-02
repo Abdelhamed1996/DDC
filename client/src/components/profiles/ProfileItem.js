@@ -9,7 +9,7 @@ const ProfileItem = props => {
         <Container fluid clasName="dci-container">
             <Row className="dci-student">
                 <Col className="student-foto">
-                    <img src={Img} className="user_size" roundedCircle />
+                    <img src={Img} className="user_size" class="rounded-circle img-fluid" width="157"  />
                 </Col>
                 <Col className="student-data">
                     <h2>Json Parse</h2>
@@ -25,7 +25,9 @@ const ProfileItem = props => {
                     <p className="skils-item">Js</p>
                     <p className="skils-item">PHP</p>
                 </Col>
+                
             </Row>
+            
         </Container>
     )
 }
