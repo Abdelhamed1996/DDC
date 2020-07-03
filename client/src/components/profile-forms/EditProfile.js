@@ -76,7 +76,7 @@ const EditProfile = props => {
     return (
         <>
             <Container>
-                <Card>
+                <Card className="mb-5">
                     <Form onSubmit={onSubmit}>
                         <div className="text-center card-r">
                             <Card className="card-head">
