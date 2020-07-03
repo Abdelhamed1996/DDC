@@ -20,33 +20,31 @@ const Profiles = props => {
                 <div className="profiles">
                     {props.profile.profiles.length > 0 ? (
                         props.profile.profiles.map(profile => (
- 
-                            
+
                             <Container fluid className="dci-container" key={profile.user._id} >
                                <Row className="dci-student">
-                                   <Col className="student-foto">
-                                       <img src={Img} className="user_size"  />
+                                    <Col className="student-foto d-flex justify-content-start ml-4 align-self-center ">
+                                       <img src={Img} className="head_size img-fluid"  />
                                    </Col>
                                    <Col className="student-data">
                                         <h2>{profile.user.name}</h2>
                                         <p>{profile.status}</p>
                                        <p>{profile.location}</p>
-                                       <Link to={`/profile/${profile.user._id}`} ><Button variant="primary m-2" type="submit" >
+                                       <Link to={`/profile/${profile.user._id}`} >
+                                           <Button className="button-profile" variant="primary m-2" type="submit" >
                                            Viev Profile
-                                       </Button></Link>
+                                       </Button>
+                                       </Link>
                                    </Col>
-                                   <Col className="skils">
+                                    <Col className="skils d-flex justify-content-center flex-column">
                                    {profile.skills.map((skill,index)=>(
                                         <p key={index} className="skils-item">{skill}</p>
                                    ))}
-
-
                                    </Col>
                                </Row>
                            </Container>
-                           
                         ))
-               ):(<h4>No profiles found</h4> 
+               ):(<h4>No profiles found</h4>
                )}
             </div>
             </>
