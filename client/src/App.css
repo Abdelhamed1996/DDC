@@ -126,8 +126,8 @@ body {
 
 .profile-form.form-group {
     padding: 1.5rem 3.5rem 3.5rem 3.5rem !important;
-    
-    
+
+
 }
 
 .profileinput {
@@ -144,15 +144,15 @@ body {
     height: 2rem;
 }
 
-.profile-text{
-    text-align:center; 
+.profile-text {
+    text-align: center;
     padding-bottom: 1rem;
 }
 
 
 /*CARD CARD CREATE Your PROFILE////////////////////////////////*/
 
-/*DCI Student LIST/////////////////////////////////////////////*/
+/*DCI Student LIST  START /////////////////////////////////////////////*/
 
 .profiles {
     background-color: white;
@@ -168,19 +168,35 @@ body {
     background-color: #EEEEEE;
 }
 
+.student-foto {
+    position: relative;
+    max-width: 50%;
+
+}
+
+img.head_size.img-fluid {
+    max-width: 10rem !important;
+    border: 1px solid #C9C9C9;
+    border-radius: 50%;
+    background: #FFFFFF;
+    padding: 1.2rem;
+}
+
+
 .skils-item {
     text-align: center;
 }
 
-.rounded-circle{
+.rounded-circle {
     display: block;
-    border:1px solid #C9C9C9;
-    padding:1.3rem;
-   
+    border: 1px solid #C9C9C9;
+    padding: 1.3rem;
+
     background-color: white;
-    
+
 }
 
+/*DCI Student LIST  END /////////////////////////////////////////////*/
 
 
 @media (max-width: 500px) {
@@ -217,8 +233,62 @@ body {
     .profile-form.form-group {
         padding: 1rem !important;
     }
-
 }
+
+/*////////////////////////////////////DCI Student LIST  for  MAX 700 px START!!   ///////////////////*/
+@media (max-width: 700px) {
+    .profiles {
+        padding: 0rem 0rem 1rem 0rem;
+        margin: 0;
+    }
+
+    .dci-container {
+        padding: 1rem 0rem 0rem 0rem;
+    }
+
+    .dci-student {
+        padding: 0 !important;
+        margin: 0.9rem !important;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0rem;
+        border: 0;
+        border-radius: 0;
+    }
+
+    .student-foto {
+        padding: 1rem 0rem 1rem 0rem;
+        margin: 0rem !important;
+        display: flex;
+        justify-content: center !important;
+    }
+
+    img.head_size.img-fluid {
+        width: 60%!important;
+    }
+
+    .student-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .skils {
+        display: flex;
+        flex-direction: row !important;
+        padding: 0;
+    }
+    .skils-item {
+        padding: 1rem;
+    }
+}
+/*////////////////////////////////////////////////DCI Student LIST  for  MAX 700 px!!    END //////*/
+
+
+
+
 
 .respnsiv_form2 {
 
@@ -241,8 +311,19 @@ body {
 
         max-width: 60%;
         min-width: 100%;
-
     }
+    .profiles{
+       margin:0!important;
+       padding:1rem 0rem 0rem 0rem;
+    }
+    img.head_size.img-fluid {
+        width: 100% !important;
+    }
+    .student-data{
+        padding:1rem 0rem 1rem 0rem;
+    }
+   
+   
 }
 
 @media (min-width: 992px) {
@@ -255,7 +336,7 @@ body {
 
 
 .nav-link {
-    border: none;
+    border: none !important;
 }
 
 .logo_size {

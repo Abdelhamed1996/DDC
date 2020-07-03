@@ -126,17 +126,19 @@ router.post('/',[
 ]
 )
 
+
+
 // Get all DDC Profiles
 
-router.get('/', async(req,res)=>{
+router.get('/', async (req, res) => {
     try {
-        const profiles = await Profile.find().populate('user',['name','avater'])
-        res.json(profiles)
+      const profiles = await Profile.find().populate('user', ['name', 'avatar']);
+      res.json(profiles);
     } catch (err) {
-        console.error(err.message)
-        res.status(500).send('server error')
+      console.error(err.message);
+      res.status(500).send('Server Error');
     }
-})
+  });
 
 // Get  DDC user Profiles by ID
 
