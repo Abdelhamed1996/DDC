@@ -5,8 +5,6 @@ body {
 
 .nav-link {
 
-    border: 1px solid rgb(243, 243, 243) !important;
-    border-radius: 10px !important;
     margin: 10px;
     font-weight: bold;
 
@@ -75,7 +73,9 @@ body {
     padding: 0rem 2rem 0rem 2rem;
 }
 
-
+.LP_I{
+    width: 100vw;
+}
 
 .text-center {
     margin: auto;
