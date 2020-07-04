@@ -42,9 +42,8 @@ const Login = props => {
 
     return (
         <>
-            <div className="text text-center text-white display-4 font-weight-bold">DCI Developer Community</div>
-            <p className="p-text text-center text-white mt-3 mar-5hv">Create a developer portfolio, share posts and get help from other developers</p>
-            <Form className=" Form1 p-3 m-auto respnsiv_form respnsiv_form3 rounded" onSubmit={onSubmit}>
+            <div className="text text-center text-white display-4 mb-5 font-weight-bold">DCI Developer Community</div>
+            <Form className=" Form1 p-3  mb-5 respnsiv_form respnsiv_form3 rounded" onSubmit={onSubmit}>
                 <h1 className="text-center mt-5 mb-4">Sign in</h1>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
