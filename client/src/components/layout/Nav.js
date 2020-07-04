@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink} from 'react-router-dom'
 import { Nav, Navbar,  } from 'react-bootstrap';
-import Src from '../../images/DDC-8.png'
+import Src from '../../images/D.svg'
 import {connect} from 'react-redux'
 import {logout} from '../../actions/auth'
 
