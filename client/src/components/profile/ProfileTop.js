@@ -1,10 +1,18 @@
 import React from 'react'
-import { Container, Form, Button, Card, } from 'react-bootstrap'
-import PropTypes from 'prop-types'
+import { Container, Form, Button, Card,Col } from 'react-bootstrap'
 import Img from '../profile-forms/man 7.png'
 import yes from '../profile-forms/yes.png'
+import PropTypes from 'prop-types'
 
-const ProfileTop = props => {
+const ProfileTop = ({profile:{
+    status,
+    company,
+    location,
+    social,
+    website,
+    skills,
+    user:{name, avatar}
+}}) => {
     return (
         <>
             <Container>
@@ -18,16 +26,19 @@ const ProfileTop = props => {
                                 <img src={yes} className="user_icon" alt="yes"/>
                             </div>
                             <div className="card-d d-flex flex-column  align-self-center">
-                                <h4 className="name">Json Parse</h4>
-                                <p>Trivago Developer</p>
-                                <p>Dusseldorf</p>
+                                <h4 className="name">{name}</h4>
+                                <p>{status}</p>
+                                <p>{location}</p>
                             </div>
                         </Card>
                     </div>
                     <div className="text-center profile-top">
-                        <Card className="card-head card-e d-flex flex-row ">education</Card>
+                        
+                        {skills.map((skill,index)=>(
+                                        <span key={index} className="">{skill} </span>
+                                   ))}
                     </div>
-                    <div>text</div>
+                    <div></div>
                 </Card>
             </Container>
 
@@ -35,8 +46,8 @@ const ProfileTop = props => {
     )
 }
 
-ProfileTop.propTypes = {
-
+ProfileTop.propTypes={
+    profile: PropTypes.object.isRequired    
 }
 
 export default ProfileTop

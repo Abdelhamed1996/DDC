@@ -7,12 +7,12 @@ import Img from '../profile-forms/man 7.png'
 import Img2 from '../profile-forms/woman-8.png'
 import {Link} from 'react-router-dom'
 
+
 const Profiles = props => {
     useEffect(() => {
         props.getProfiles();
     }, []);
 
-    console.log(props.profile)
     return (
         <>
             {props.profile.loading ? <Spinner /> :
@@ -34,7 +34,7 @@ const Profiles = props => {
                                    <Col className="student-data">
                                         <h2>{profile.user.name}</h2>
                                         <p>{profile.status}</p>
-                        {profile.location ? <p>{profile.location}</p> :<p className="hide"> .</p>}
+                                        {profile.location ? <p>{profile.location}</p> :<p className="hide"> .</p>}
                                        <Link to={`/profile/${profile.user._id}`} >
                                            <Button className="button-profile" variant="primary m-2" type="submit" >
                                            Viev Profile
@@ -57,6 +57,7 @@ const Profiles = props => {
         </>
     );
 };
+
 
 
 const mapStateToProps = state => ({
