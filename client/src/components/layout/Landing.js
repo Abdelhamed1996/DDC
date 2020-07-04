@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import Src from '../../images/Artboard 1.svg'
+import Src from '../../images/Students.svg'
 
 export const Landing = (props) => {
 
