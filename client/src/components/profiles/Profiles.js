@@ -17,8 +17,8 @@ const Profiles = props => {
         <>
             {props.profile.loading ? <Spinner /> :
             <>
-                <h1>Developers</h1>
-                <p>Browse and connect with Dci students</p>
+                <h1 className="profiles-h1">Developers</h1>
+                <p className="profiles-p1">Browse and connect with Dci students</p>
                 <div className="profiles">
                     {props.profile.profiles.length > 0 ? (
                         props.profile.profiles.map(profile => (

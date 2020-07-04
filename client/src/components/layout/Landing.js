@@ -4,9 +4,9 @@ import Src from '../../images/Students.svg'
 
 export const Landing = (props) => {
 
-    if(props.isAuht){
+    if (props.isAuht) {
         props.history.push('/dashboard')
-  }
+    }
     return (
         <>
             <div className="text text-center text-white display-4 font-weight-bold">DCI Developer Community</div>
@@ -16,7 +16,7 @@ export const Landing = (props) => {
         </>
     );
 }
-const mapStateToProps= state=>({
+const mapStateToProps = state => ({
     isAuht: state.auth.isAuht
 })
 
