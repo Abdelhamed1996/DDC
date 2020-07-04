@@ -16,6 +16,9 @@ router.post(
 check('name','Name is required')
 .not()
 .isEmpty(),
+check('gender','gender is required')
+.not()
+.isEmpty(),
 check('email','Email is required')
 .isEmail(),
 check('password','Password is required')
@@ -26,7 +29,7 @@ async (req,res)=> {
     if(!errors.isEmpty()){
         return res.status(400).json({errors: errors.array()})
     }
-    const { name, email, password} = req.body
+    const { name, email, password, gender} = req.body
 
     try {
 
@@ -38,7 +41,7 @@ async (req,res)=> {
         }   
 
 
-    // Get users gravatart
+    // Get users avatart
         const avatar = normalize(
             gravatar.url(email,{
             s:'200',
@@ -52,7 +55,8 @@ async (req,res)=> {
             name,
             email,
             password,
-            avatar
+            avatar,
+            gender
         })
 
     // Encrypt password
@@ -61,6 +65,7 @@ async (req,res)=> {
     user.password = await bcrypt.hash(password, salt)
 
     await user.save()
+
 
     // Return jsonwebtoken
         const payload ={

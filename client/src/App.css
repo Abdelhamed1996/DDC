@@ -159,6 +159,11 @@ body {
     padding: 3rem;
 }
 
+
+.hide{
+    opacity: 0;
+}
+
 .dci-student {
 
     border: 1px solid #42A5F5;
