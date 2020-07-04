@@ -76,8 +76,6 @@ body {
 
 .LP_I {
     width: 100%;
-    height: 50vh;
-
 }
 
 .text-center {
@@ -168,6 +166,7 @@ body {
 .profiles {
     background-color: white;
     padding: 3rem;
+    border-radius: 5px;
 }
 
 
