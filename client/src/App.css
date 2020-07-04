@@ -220,7 +220,7 @@ img.head_size.img-fluid {
 }
 
 .mb-5 {
-    padding: 2rem;
+    padding: 3rem;
 }
 
 .card-k {
@@ -233,35 +233,61 @@ img.head_size.img-fluid {
     max-width: 10rem;
     max-height: 10rem;
 }
-.ikon-k{
+
+.ikon-k {
     display: block;
     position: relative;
 }
-.user_icon{
+
+.user_icon {
     display: block;
     position: absolute;
-    width:2.1rem;
-    top:10rem;
-    left:3.4rem;
+    width: 2.1rem;
+    top: 10rem;
+    left: 3.4rem;
 }
-.b-2{
-    background-color: white!important;
+
+.b-2 {
+    background-color: white !important;
 }
-.card-head.card-t{
-    background-color:#42A5F5!important;
+
+.card-head.card-t {
+    background-color: #42A5F5 !important;
     border-bottom: 1px solid white;
-    border-radius: 0.25rem 0.25rem 0rem 0.25rem!important;
+    border-radius: 0.25rem 0.25rem 0rem 0.25rem !important;
+
 }
-.name{
-    color:white;
+
+.name {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
 }
-.card-d{
-   margin-left:2rem ;
+
+.card-d {
+    margin-left: 2rem;
 }
-.card-head.card-e{
-    background-color: #42A5F5!important;
-    border:none;
-    border-radius:0rem 0rem 0.25rem 0.25rem!important;
+
+.card-head.card-e {
+    background-color: #42A5F5 !important;
+    border: none;
+
+}
+
+.text-center.profile-top {
+    background-color: #42A5F5 !important;
+    border-radius: 0rem 0rem 0.45rem 0.45rem !important;
+}
+
+
+
+.skil {
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+}
+.span{
+    font-size: 28px!important;
 }
 
 

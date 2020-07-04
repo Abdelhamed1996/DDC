@@ -17,7 +17,7 @@ const ProfileTop = ({profile:{
         <>
             <Container>
                 <Card className="mb-5">
-                    <div className="text-center profile-top">
+                    <div className="text-center profile-top top">
                         <Card className="card-head card-t d-flex flex-row">
                             <div className="card-k">
                                 <img src={Img} className="user_size  img-fluid" alt="avatar" />
@@ -33,12 +33,12 @@ const ProfileTop = ({profile:{
                         </Card>
                     </div>
                     <div className="text-center profile-top">
-                        
+                        <p className="skil">Skil set</p>
                         {skills.map((skill,index)=>(
-                                        <span key={index} className="">{skill} </span>
+                                    <span className="span-skils" key={index} className="">{skill} </span>
                                    ))}
                     </div>
-                    <div></div>
+                    
                 </Card>
             </Container>
 

@@ -19,6 +19,7 @@ const Profile = ({getProfileById, profile:{profile,loading}, auth, match}) => {
             ) : (<>
                     <div class="profile-grid">
                         <ProfileTop profile={profile}/>
+
                     </div>
                     <Link to='/profiles'><Button variant="secondary">Back to Profiles</Button></Link>
                     {auth.isAuht && auth.loading === false  && auth.user._id === profile.user._id && (<Link to='/edit-profile'><Button variant="primary">Edit Profile</Button></Link>)}
