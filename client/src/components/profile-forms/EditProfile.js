@@ -76,7 +76,7 @@ const EditProfile = props => {
     return (
         <>
             <Container>
-                <Card>
+                <Card className="mb-5">
                     <Form onSubmit={onSubmit}>
                         <div className="text-center card-r">
                             <Card className="card-head">
@@ -85,7 +85,7 @@ const EditProfile = props => {
                             <Card className="blue-card">
                                 <Card.Body className="round-user d-flex justify-content-center">
                                     <div className="foto-user d-flex justify-content-centerd-flex align-items-center align-self-center ">
-                                        <img src={Img} className="user_size img-fluid"  />
+                                        <img src={Img} className="user_size img-fluid"  alt="avatar"/>
                                     </div>
                                 </Card.Body>
                             </Card>

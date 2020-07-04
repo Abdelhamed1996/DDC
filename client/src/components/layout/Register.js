@@ -11,10 +11,11 @@ const Register = props => {
         name: '',
         email: '',
         password: '',
-        password2: ''
+        password2: '',
+        gender:''
     });
 
-    const { name, email, password, password2 } = formData;
+    const { name, email, password, password2, gender } = formData;
 
     const onChange = (e) =>
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -24,9 +25,10 @@ const Register = props => {
         if (password !== password2) {
             console.log('Passwords do not match');
         } else {
-            props.register({ name, email, password })
+            props.register({ name, email, password, gender })
         }
     };
+
 
     if(props.isAuht){
         props.history.push('/dashboard')
@@ -38,6 +40,13 @@ const Register = props => {
                         <div className="text text-center text-white display-4 mb-5 font-weight-bold">DCI Developer Community</div>
             <Form className=" Form1 p-3 mt-5 mb-5 respnsiv_form2  respnsiv_form3 rounded " onSubmit={onSubmit}>
                 <h1 className="text-center mt-5 mb-3">Sign Up</h1>
+                <Form.Group controlId="formBasicEmail">
+                    <Form.Control as="select" className="profileinput" name="gender" placeholder="select the gender" value={gender} onChange={e => onChange(e)}>
+                        <option>select gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </Form.Control>
+                </Form.Group>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
                     <Form.Control

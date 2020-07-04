@@ -53,7 +53,7 @@ const CreateProfile = props => {
     return (
         <>
             <Container>
-                <Card>
+                <Card className="mb-5">
                     <Form onSubmit={onSubmit}>
                         <div className="text-center card-r">
                             <Card className="card-head">
@@ -62,7 +62,7 @@ const CreateProfile = props => {
                                 <Card className="blue-card">
                                 <Card.Body className="round-user d-flex justify-content-center">
                                     <div className="foto-user d-flex justify-content-centerd-flex align-items-center align-self-center ">
-                                        <img src={Img} className="user_size img-fluid"  />
+                                        <img src={Img} className="user_size img-fluid" alt="avatar" />
                                     </div>
                                 </Card.Body>
                             </Card>
@@ -114,7 +114,7 @@ const CreateProfile = props => {
                             <Form.Group>
                                 
                                 <div className=" social-input d-flex p-3">
-                                    <img src={Src} alt="." className="icons mr-3" />
+                                    <img src={Src}  className="icons mr-3" alt="twitter"/>
                                     <Form.Control className="social-control"
                                         type="text"
                                         placeholder="Twitter URL"
@@ -125,7 +125,7 @@ const CreateProfile = props => {
                                 </div>
 
                                 <div className=" social-input d-flex p-3">
-                                    <img src={Fac} className="icons mr-3" />
+                                    <img src={Fac} className="icons mr-3" alt="facebook" />
                                     <Form.Control className="social-control"
                                         type="text"
                                         placeholder="Facebook URL"
@@ -137,7 +137,7 @@ const CreateProfile = props => {
                                 </div>
 
                                 <div className=" social-input d-flex p-3">
-                                    <img src={Inst} className="icons mr-3"/>
+                                    <img src={Inst} className="icons mr-3" alt="insta"/>
                                     <Form.Control className="social-control"
                                         type="text"
                                         placeholder="Instagram URL"
@@ -148,7 +148,7 @@ const CreateProfile = props => {
                                     />
                                 </div>
                                 <div className=" social-input d-flex p-3">
-                                    <img src={Xing} className="icons mr-3"/>
+                                    <img src={Xing} className="icons mr-3" alt="xing"/>
                                     <Form.Control className="social-control"
                                         type="text"
                                         placeholder="Xing URL"
