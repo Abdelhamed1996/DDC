@@ -33,8 +33,8 @@ const Profiles = props => {
                                    </Col>
                                    <Col className="student-data">
                                         <h2>{profile.user.name}</h2>
-                                        <p>{profile.status}</p>
-                                        {profile.location ? <p>{profile.location}</p> :<p className="hide"> .</p>}
+                                        <p><i class="fas fa-briefcase" style={{marginRight:"5px", color:"#43a5f5"}}></i>{profile.status}</p>
+                                        {profile.location ? <p><i class="fas fa-map-marker-alt profile-icon" style={{marginRight:"5px", color:"#43a5f5"}}></i>{profile.location}</p> :<p className="hide"> .</p>}
                                        <Link to={`/profile/${profile.user._id}`} >
                                            <Button className="button-profile" variant="primary m-2" type="submit" >
                                            Viev Profile

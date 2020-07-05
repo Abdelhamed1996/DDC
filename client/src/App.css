@@ -218,6 +218,43 @@ img.head_size.img-fluid {
 .profile-top {
     margin: 0;
 }
+.profile-skills {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    background:#ffffff;
+    bottom: -14%;
+    padding: 0 10%;
+}
+
+.skillp{
+    color: #43a5f5;
+    padding: 0 1rem 1rem 1rem ;
+    position: absolute;
+    width: auto;
+    background:#ffffff;
+    top: -19%;
+    font-size: 1.5rem;
+
+}
+
+.skills-block{
+    border: solid 1px #42A5F5;
+    margin: 8% 7% 7% 7%;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+}
+ .span-skills{
+    margin: 0 5%;
+    width: auto;
+} 
+
 
 .mb-5 {
     padding: 3rem;
@@ -243,8 +280,8 @@ img.head_size.img-fluid {
     display: block;
     position: absolute;
     width: 2.1rem;
-    top: 10rem;
-    left: 3.4rem;
+    top: 80%;
+    left: 15%;
 }
 
 .b-2 {
@@ -290,7 +327,43 @@ img.head_size.img-fluid {
     font-size: 28px!important;
 }
 
+.card-profile{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    background: #42A5F5;
 
+}
+
+.info-profile{
+    margin-left: 5%;
+    text-align: left;
+}
+
+.about-me{
+    background: #eeeeee;
+    text-align: center;
+    padding: 6%;
+    color: black;
+    border-radius: 5px;
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    width: 50%;
+}
+
+.profile-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 2rem;
+}
 
 /*PROFILE TOP     End /////////////////////////////////////////////*/
 
@@ -335,6 +408,22 @@ img.head_size.img-fluid {
         height: 45vh;
 
     }
+    .profile-top{
+        max-width:100%;
+    }
+    .card{
+        padding: 2rem 0 0 0;
+    }
+    .card-profile{
+        display: flex;
+        flex-direction: column;
+    }
+    .info-profile{
+        padding-top: 7%;
+        text-align: center;
+        margin-left: 0;
+    }
+
 }
 
 /*////////////////////////////////////DCI Student LIST  for  MAX 700 px START!!   ///////////////////*/
