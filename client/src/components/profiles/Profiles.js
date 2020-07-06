@@ -18,7 +18,7 @@ const Profiles = props => {
             {props.profile.loading ? <Spinner /> :
             <>
                 <h1 className="profiles-h1">Developers</h1>
-                <p className="profiles-p1">Browse and connect with Dci students</p>
+                <p className="profiles-p1">Browse and connect with DCI students</p>
                 <div className="profiles">
                     {props.profile.profiles.length > 0 ? (
                         props.profile.profiles.map(profile => (
@@ -37,7 +37,7 @@ const Profiles = props => {
                                         {profile.location ? <p><i class="fas fa-map-marker-alt profile-icon" style={{marginRight:"5px", color:"#43a5f5"}}></i>{profile.location}</p> :<p className="hide"> .</p>}
                                        <Link to={`/profile/${profile.user._id}`} >
                                            <Button className="button-profile" variant="primary m-2" type="submit" >
-                                           Viev Profile
+                                           View Profile
                                        </Button>
                                        </Link>
                                    </Col>
