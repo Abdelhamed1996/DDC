@@ -24,6 +24,11 @@ const ProfileTop = ({profile:{
     user:{name, gender}
     }}) => {
 
+        const capitalize= (s)=>
+        {
+        return s && s[0].toUpperCase() + s.slice(1);
+        }
+
     return (
         <>
             <Container>
@@ -35,7 +40,7 @@ const ProfileTop = ({profile:{
                                 <img src={yes} className="user_icon" alt="yes"/>
                             </div>
                             <div className="info-profile">
-                                <h4 className="name">{name}</h4>
+                                <h4 className="name">{capitalize(name)}</h4>
                                 <p style={{fontSize:"1rem"}}><i class="fas fa-briefcase" style={{marginRight:"5px", color:"#eeeeee"}}></i>{status} <>{company && (<i>work at {company}</i>)}</></p>
                                 <p><i class="fas fa-map-marker-alt profile-icon" style={{marginRight:"5px", color:"#eeeeee"}}></i>{location}</p>
                             </div>

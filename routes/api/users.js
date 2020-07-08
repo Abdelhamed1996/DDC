@@ -33,6 +33,7 @@ async (req,res)=> {
 
     try {
 
+
     // see if User exist
         let user = await User.findOne({email})
 

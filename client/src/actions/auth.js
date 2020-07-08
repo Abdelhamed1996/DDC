@@ -35,6 +35,7 @@ export const register = ({ name, email, password, gender }) => async dispatch =>
             'Content-Type': 'application/json'
         }
     }
+
     const body = JSON.stringify({ name, email, password, gender });
 
     try {

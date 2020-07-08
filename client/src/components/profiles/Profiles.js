@@ -13,6 +13,11 @@ const Profiles = props => {
         props.getProfiles();
     }, []);
 
+    const capitalize= (s)=>
+    {
+    return s && s[0].toUpperCase() + s.slice(1);
+    }
+
     return (
         <>
             {props.profile.loading ? <Spinner /> :
@@ -32,7 +37,7 @@ const Profiles = props => {
                                        {profile.user.gender === 'Male' ? <img src={Img} className="head_size img-fluid"  alt="avatar"/> : <img src={Img2} className="head_size img-fluid"  alt="avatar"/>                     }
                                    </Col>
                                    <Col className="student-data">
-                                        <h2>{profile.user.name}</h2>
+                                        <h2>{capitalize(profile.user.name)}</h2>
                                         <p><i class="fas fa-briefcase" style={{marginRight:"5px", color:"#43a5f5"}}></i>{profile.status}</p>
                                         {profile.location ? <p><i class="fas fa-map-marker-alt profile-icon" style={{marginRight:"5px", color:"#43a5f5"}}></i>{profile.location}</p> :<p className="hide"> .</p>}
                                        <Link to={`/profile/${profile.user._id}`} >
