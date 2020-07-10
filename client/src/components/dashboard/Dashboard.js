@@ -26,7 +26,7 @@ const Dashboard = props => {
             <Card>
                 <Card.Header>Welcome {props.auth && capitalize(props.auth.name)}</Card.Header>
                 <div className="dash-items">
-                    <img src={props.auth.gender==='Male' ? Img : Img2} className="dash-img" alt="avatar" />
+                    <Link to='/me'><img src={props.auth.gender==='Male' ? Img : Img2} className="head_size img-fluid" alt="avatar" /></Link>
                     <Card.Body>
                         <Card.Text>
                             {props.profile.profile !== null ? (<><DashboardAction/></>) : (

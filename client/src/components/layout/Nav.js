@@ -10,6 +10,7 @@ const Navbar1 = (props) => {
 
     const authLinks =(
         <>  
+            <Nav.Link><NavLink exact to="/me" className="NavLink border-0 " ><i class="fas fa-user"></i><span className="navbar-span">Me</span></NavLink></Nav.Link>
             <Nav.Link><NavLink exact to="/dashboard" className="NavLink border-0 " ><i class="fas fa-home"></i><span className="navbar-span">Home</span></NavLink></Nav.Link>
             <Nav.Link><NavLink exact to="/profiles" className="NavLink border-0 " ><i class="fas fa-users"></i><span className="navbar-span">DCI Students</span></NavLink></Nav.Link>
             <Nav.Link><NavLink exact to="/chat" className="NavLink border-0 " ><i class="fas fa-comment"></i><span className="navbar-span">Chat</span></NavLink></Nav.Link>

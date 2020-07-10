@@ -370,12 +370,13 @@ img.head_size.img-fluid {
     display: flex;
     flex-direction: row;
     background: #eeeeee;
+    padding: 1rem;
 }
 
 
 
 .navbar-span{
-    display: none;
+    margin-left: 5px;
 }
 
 .dash-img{
@@ -540,10 +541,15 @@ img.head_size.img-fluid {
     .student-data {
         padding: 1rem 0rem 1rem 0rem;
     }
-    .navbar-span{
-        display: inline;
-        margin-left: 10px;
+    .dash-items{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background: #eeeeee;
+        padding: 1rem;
+        margin-bottom: 2rem;
     }
+
 
 
 
@@ -556,6 +562,7 @@ img.head_size.img-fluid {
         flex-basis: auto;
         justify-content: flex-end;
     }
+    
 
 }
 
