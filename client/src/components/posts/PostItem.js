@@ -18,21 +18,18 @@ const PostItem = ({
                 <div className="posts-head p-4">
                     <Card.Img src={Img} className="head_size img-fluid" alt="avatar" />
                     <Card.Body className="text-b">
-                        <Card.Title className="posts-title d-flex">Json Parse</Card.Title>
+                        <Card.Title className="posts-title d-flex">{name}</Card.Title>
                     </Card.Body>
                 </div>
                 <Col>
                     <Card.Body className="posts-content">
+                        <p><Moment format='YYYY/MM/DD'>{date}</Moment></p>
                         <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.Some quick example text to build on the card title and make up the bulk of
-                            the card's content.Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
+                            {text}
                         </Card.Text>
                         <div className="posts-bottom d-flex justify-content-end align-items-center">
-                            <div class="far fa-thumbs-up d m-3"></div>
+                            <div class="far fa-thumbs-up d m-3"><span>{likes.lenght}</span></div>
                             <div class="far fa-thumbs-down d m-3"></div>
-                            <Button variant="primary d m-2">Discussion</Button>
                             <Button variant="danger d  m-2">Delete</Button>
                         </div>
                     </Card.Body>
