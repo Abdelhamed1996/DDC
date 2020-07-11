@@ -520,10 +520,11 @@ img.head_size.img-fluid {
 
 .post-container{
     background-color: white;
-    padding: 0.3rem;
+    padding: 0.6rem 1rem ;
 }
 .posts {
     background-color: #F2F2F2;
+   
     
 }
 
@@ -537,8 +538,15 @@ img.head_size.img-fluid {
     display: block;
     font-size: 1.6rem;
     color: rgb(107, 107, 107);
-
 }
+h3.post-text{
+    color:white;
+}
+textarea{
+    display:flex;
+    width:100%; 
+}
+
 
 /*////////////////////////////////////////////////POST Article    END       //////*/
 

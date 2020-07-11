@@ -8,8 +8,8 @@ const PostForm = ({addPost}) => {
     
     return (
         <div className="post-form">
-            <div className="bg-primary p">
-                <h3>Say Somthing...</h3>
+            <div>
+                <h3 className="post-text">Say Something...</h3>
             </div>
             <form className="form my-1" onSubmit={e=>{
                e.preventDefault();
@@ -18,7 +18,6 @@ const PostForm = ({addPost}) => {
             }}>
                 <textarea
                 name="text"
-                cols="30"
                 rows="5"
                 placeholder="Create a post"
                 value={text}

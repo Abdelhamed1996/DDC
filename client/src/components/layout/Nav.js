@@ -29,7 +29,7 @@ const Navbar1 = (props) => {
 
 
     return (
-        <Navbar collapseOnSelect expand="lg"  >
+        <Navbar  collapseOnSelect expand="lg "  >
             <Navbar.Brand href="/"><img src={Src} className="logo_size" alt="logo"/></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav"  >
