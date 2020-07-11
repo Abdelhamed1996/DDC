@@ -32,8 +32,6 @@ const Profiles = props => {
                             <Container fluid className="dci-container" key={profile.user._id} >
                                <Row className="dci-student">
                                     <Col className="student-foto d-flex justify-content-start ml-4 align-self-center ">
-                                        
-                                       
                                        {profile.user.gender === 'Male' ? <img src={Img} className="head_size img-fluid"  alt="avatar"/> : <img src={Img2} className="head_size img-fluid"  alt="avatar"/>                     }
                                    </Col>
                                    <Col className="student-data">
