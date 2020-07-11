@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink} from 'react-router-dom'
+import { NavLink , Link} from 'react-router-dom'
 import { Nav, Navbar,  } from 'react-bootstrap';
 import Src from '../../images/D.svg'
 import {connect} from 'react-redux'
@@ -14,7 +14,7 @@ const Navbar1 = (props) => {
             <Nav.Link><NavLink exact to="/dashboard" className="NavLink border-0 " ><i class="fas fa-home"></i><span className="navbar-span">Home</span></NavLink></Nav.Link>
             <Nav.Link><NavLink exact to="/profiles" className="NavLink border-0 " ><i class="fas fa-users"></i><span className="navbar-span">DCI Students</span></NavLink></Nav.Link>
             <Nav.Link><NavLink exact to="/chat" className="NavLink border-0 " ><i class="fas fa-comment"></i><span className="navbar-span">Chat</span></NavLink></Nav.Link>
-            <Nav.Link><NavLink exact to="/"   className="NavLink border-0 " onClick={props.logout}><i class="fas fa-sign-out-alt"></i><span className="navbar-span">Logout</span></NavLink></Nav.Link>
+            <Nav.Link> <NavLink to="/"   className="NavLink border-0 " onClick={props.logout}><i class="fas fa-sign-out-alt"></i><span className="navbar-span">Logout</span></NavLink></Nav.Link>
         </>
 
     )
