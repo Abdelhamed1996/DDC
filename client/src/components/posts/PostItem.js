@@ -5,11 +5,15 @@ import Moment from 'react-moment'
 import { connect } from 'react-redux'
 import { Container, Button, Card, Row, Col } from 'react-bootstrap'
 import Img from '../profile-forms/man 7.png'
+import { addLike, removeLike,deletePost} from '../../actions/post'
 
 
 
-const PostItem = ({ 
-    auth, 
+const PostItem = ({
+    addLike,
+    removeLike,
+    deletePost,
+    auth,
     post: { _id, text, name, avatar, user, likes, comments, date }
 }) =>
     <>
@@ -28,9 +32,23 @@ const PostItem = ({
                             {text}
                         </Card.Text>
                         <div className="posts-bottom d-flex justify-content-end align-items-center">
+<<<<<<< HEAD
                             <div class="far fa-thumbs-up d m-3"><span>{likes.lenght}</span></div>
                             <div class="far fa-thumbs-down d m-3"></div>
                             <Button variant="danger d  m-2">Delete</Button>
+=======
+                            <div class="far fa-thumbs-up d m-3"><span>{likes.length}</span></div>
+                            <div class="far fa-thumbs-down d m-3"></div>
+                            <Button variant="primary d m-2">Discussion{comments.length > 0 && (
+
+                                <span class="comment-count">{comments.length}</span>
+                            )}
+                            </Button>
+                            {!auth.loading && user === auth.user._id && (
+
+                                <Button onClick={e=>deletePost(_id)} variant="danger d  m-2">Delete</Button>
+                            )}
+>>>>>>> 53da956bbd08cf2cd550bfb42e2ddfdc02685e3d
                         </div>
                     </Card.Body>
                 </Col>
@@ -43,10 +61,13 @@ const PostItem = ({
 PostItem.propTypes = {
 
     post: PropTypes.object.isRequired,
-    auth: PropTypes.object.isRequired
+    auth: PropTypes.object.isRequired,
+    addLike:PropTypes.func.isRequired,
+    removeLike:PropTypes.func.isRequired,
+    deletePost:PropTypes.func.isRequired,
 }
 const mapStateToProps = state => ({
     auth: state.auth
 });
 
-export default connect(mapStateToProps, {})(PostItem)
+export default connect(mapStateToProps, {addLike,removeLike,deletePost})(PostItem)
