@@ -32,23 +32,11 @@ const PostItem = ({
                             {text}
                         </Card.Text>
                         <div className="posts-bottom d-flex justify-content-end align-items-center">
-<<<<<<< HEAD
-                            <div class="far fa-thumbs-up d m-3"><span>{likes.lenght}</span></div>
-                            <div class="far fa-thumbs-down d m-3"></div>
-                            <Button variant="danger d  m-2">Delete</Button>
-=======
-                            <div class="far fa-thumbs-up d m-3"><span>{likes.length}</span></div>
-                            <div class="far fa-thumbs-down d m-3"></div>
-                            <Button variant="primary d m-2">Discussion{comments.length > 0 && (
-
-                                <span class="comment-count">{comments.length}</span>
-                            )}
-                            </Button>
+                            <div onClick={e=> addLike(_id)} className="postBtn"><i class="far fa-thumbs-up d m-3" ></i></div><span>{likes.length}</span>
+                            <div onClick={e=> removeLike(_id)} className="postBtn"><i class="far fa-thumbs-down d m-3 "></i></div>
                             {!auth.loading && user === auth.user._id && (
-
                                 <Button onClick={e=>deletePost(_id)} variant="danger d  m-2">Delete</Button>
                             )}
->>>>>>> 53da956bbd08cf2cd550bfb42e2ddfdc02685e3d
                         </div>
                     </Card.Body>
                 </Col>

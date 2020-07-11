@@ -30,7 +30,7 @@ export const getPosts = () => async dispatch => {
 
 export const addLike = id => async dispatch => {
     try {
-        const res = await axios.get(`/api/posts/like/${id}`);
+        const res = await axios.put(`/api/posts/like/${id}`);
 
         dispatch({
             type: UPDATE_LIKES,
@@ -49,7 +49,7 @@ export const addLike = id => async dispatch => {
 
 export const removeLike = id => async dispatch => {
     try {
-        const res = await axios.get(`/api/posts/unlike/${id}`);
+        const res = await axios.put(`/api/posts/unlike/${id}`);
 
         dispatch({
             type: UPDATE_LIKES,
@@ -113,7 +113,7 @@ export const addPost = formData => async dispatch => {
 
 //GET POST
 
-export const getPosts = id => async dispatch => {
+export const getPost = id => async dispatch => {
     try {
         const res = await axios.get(`/api/posts/${id}`);
 

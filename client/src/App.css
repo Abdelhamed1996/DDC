@@ -390,6 +390,12 @@ img.head_size.img-fluid {
     margin: 2vw;
 }
 
+
+.postBtn {
+    cursor: pointer;
+    color: blue;
+}
+
 /*PROFILE TOP     End /////////////////////////////////////////////*/
 
 
