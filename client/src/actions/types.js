@@ -10,3 +10,5 @@ export const GET_PROFILES = 'GET_PROFILES';
 export const UPDATE_PROFILE = 'UPDATE_PROFILE';
 export const CLEAR_PROFILE = 'CLEAR_ERROR';
 export const PROFILE_ERROR = 'PROFIL_ERROR';
+export const GET_POSTS = 'GET_POSTS';
+export const POST_ERROR = 'POST_ERROR';

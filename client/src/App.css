@@ -218,29 +218,30 @@ img.head_size.img-fluid {
 .profile-top {
     margin: 0;
 }
+
 .profile-skills {
     margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     position: absolute;
-    background:#ffffff;
+    background: #ffffff;
     bottom: -14%;
     padding: 0 10%;
 }
 
-.skillp{
+.skillp {
     color: #43a5f5;
-    padding: 0 1rem 1rem 1rem ;
+    padding: 0 1rem 1rem 1rem;
     position: absolute;
     width: auto;
-    background:#ffffff;
+    background: #ffffff;
     top: -19%;
     font-size: 1.5rem;
 
 }
 
-.skills-block{
+.skills-block {
     border: solid 1px #42A5F5;
     margin: 8% 7% 7% 7%;
     border-radius: 5px;
@@ -250,10 +251,11 @@ img.head_size.img-fluid {
     align-items: center;
     height: 100px;
 }
- .span-skills{
+
+.span-skills {
     margin: 0 5%;
     width: auto;
-} 
+}
 
 
 .mb-5 {
@@ -323,11 +325,12 @@ img.head_size.img-fluid {
     font-size: 28px;
     font-weight: 400;
 }
-.span{
-    font-size: 28px!important;
+
+.span {
+    font-size: 28px !important;
 }
 
-.card-profile{
+.card-profile {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -336,12 +339,12 @@ img.head_size.img-fluid {
 
 }
 
-.info-profile{
+.info-profile {
     margin-left: 5%;
     text-align: left;
 }
 
-.about-me{
+.about-me {
     background: #eeeeee;
     text-align: center;
     padding: 6%;
@@ -349,7 +352,7 @@ img.head_size.img-fluid {
     border-radius: 5px;
 }
 
-.social{
+.social {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -357,7 +360,7 @@ img.head_size.img-fluid {
     width: 50%;
 }
 
-.profile-btns{
+.profile-btns {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -365,7 +368,7 @@ img.head_size.img-fluid {
     margin-bottom: 2rem;
 }
 
-.dash-items{
+.dash-items {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -379,13 +382,14 @@ img.head_size.img-fluid {
     margin-left: 5px;
 }
 
-.dash-img{
+.dash-img {
     width: 150px;
     height: 150px;
     border: solid 2px gray;
     border-radius: 50%;
     margin: 2vw;
 }
+
 /*PROFILE TOP     End /////////////////////////////////////////////*/
 
 
@@ -429,17 +433,21 @@ img.head_size.img-fluid {
         height: 45vh;
 
     }
-    .profile-top{
-        max-width:100%;
+
+    .profile-top {
+        max-width: 100%;
     }
-    .card{
+
+    .card {
         padding: 2rem 0 0 0;
     }
-    .card-profile{
+
+    .card-profile {
         display: flex;
         flex-direction: column;
     }
-    .info-profile{
+
+    .info-profile {
         padding-top: 7%;
         text-align: center;
         margin-left: 0;
@@ -502,7 +510,30 @@ img.head_size.img-fluid {
 
 /*////////////////////////////////////////////////DCI Student LIST  for  MAX 700 px!!    END //////*/
 
+/*////////////////////////////////////////////////POST Article    START       //////*/
 
+.post-container{
+    background-color: white;
+    padding: 3rem;
+}
+.posts {
+    background-color: #F2F2F2;
+}
+
+.text-b {
+    padding-bottom: 0 !important;
+}
+.posts-content{
+    padding-bottom: 0;
+}
+.svg-inline--fa.d {
+    display: block;
+    font-size: 1.6rem;
+    color: rgb(107, 107, 107);
+
+}
+
+/*////////////////////////////////////////////////POST Article    END       //////*/
 
 
 
@@ -540,6 +571,11 @@ img.head_size.img-fluid {
 
     .student-data {
         padding: 1rem 0rem 1rem 0rem;
+    }
+
+    .navbar-span {
+        display: inline;
+        margin-left: 10px;
     }
     .dash-items{
         align-items: center;
