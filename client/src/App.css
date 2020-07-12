@@ -378,7 +378,7 @@ img.head_size.img-fluid {
 
 
 
-.navbar-span{
+.navbar-span {
     margin-left: 5px;
 }
 
@@ -518,38 +518,137 @@ img.head_size.img-fluid {
 
 /*////////////////////////////////////////////////POST Article    START       //////*/
 
-.post-container{
+.post-container {
     background-color: white;
-    padding: 0.6rem 1rem ;
+    padding: 0.2rem 1rem;
 }
+
 .posts {
     background-color: #F2F2F2;
-   
-    
+
+}
+
+.posts-head {
+    padding: 1rem 1rem 0rem 1rem;
+    margin-left: 1rem;
 }
 
 .text-b {
     padding-bottom: 0 !important;
 }
-.posts-content{
+
+.posts-content {
     padding-bottom: 0;
 }
+
 .svg-inline--fa.d {
     display: block;
     font-size: 1.6rem;
     color: rgb(107, 107, 107);
 }
-h3.post-text{
-    color:white;
+
+h3.post-text {
+    color: white;
 }
-textarea{
-    display:flex;
-    width:100%; 
+
+textarea {
+    display: flex;
+    width: 100%;
+}
+
+.m-3 {
+    margin: 0rem 1rem 0rem 1rem !important;
+}
+
+.date-m {
+    font-weight: 500;
+    color: black;
 }
 
 
 /*////////////////////////////////////////////////POST Article    END       //////*/
 
+
+/*////////////////////////////////////////////////POST ARTICLE    START  for 700px !!      //////*/
+
+
+@media (max-width: 700px) {
+
+    .posts {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        background: #e9e9e9;
+        border-radius: .4em;
+    }
+
+    .posts:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-top-color: #e9e9e9;
+        border-bottom: 0;
+        border-left: 0;
+        margin-left: -10px;
+        margin-bottom: -20px;
+    }
+    .posts-head{
+        width:8rem;
+    }
+    .head_size.img-fluid.post{
+        padding:0.8rem;
+    }
+
+    .post-container {
+        padding: 1rem !important;
+    }
+    .h5{
+        font-size: 1rem!important;
+    }
+    .posts-content{
+        display: flex;
+        flex-direction: column;
+        padding:1rem!important;
+    }
+    .content-b{
+        display: flex;
+        flex-direction: column;
+        justify-content: start!important;
+        align-items: flex-start;
+    }
+    .svg-inline--fa.fa-w-16 {
+        width: 1rem;
+    }
+    .post-h{
+        padding:0;
+    }
+    button.btn.btn-danger{
+        margin:0!important;
+        padding:0.2rem!important;
+    }
+    .date-m{
+        font-size: 0.8rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////POST ARTICLE    END  for 700px !!      //////*/
 
 
 .respnsiv_form2 {
@@ -592,7 +691,8 @@ textarea{
         display: inline;
         margin-left: 10px;
     }
-    .dash-items{
+
+    .dash-items {
         align-items: center;
         display: flex;
         flex-direction: column;
@@ -613,7 +713,7 @@ textarea{
         flex-basis: auto;
         justify-content: flex-end;
     }
-    
+
 
 }
 
