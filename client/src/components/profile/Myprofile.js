@@ -22,7 +22,7 @@ const MyProfile = ({getCurrentProfile, profile:{profile,loading}}) => {
 
                     </div>
                     <div className="profile-btns">
-                    <Link to='/dashboard'><Button variant="secondary" >Back</Button></Link>
+                    <Link to='/me'><Button variant="secondary" >Back</Button></Link>
                     <Link to='/edit-profile'><Button variant="primary">Edit Profile</Button></Link>
                     </div>
             </>)}

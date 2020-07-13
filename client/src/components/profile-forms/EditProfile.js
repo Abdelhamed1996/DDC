@@ -68,6 +68,7 @@ const EditProfile = props => {
     const onSubmit = (e) => {
         e.preventDefault();
         props.createProfile(formData, props.history)
+        props.history.push('/me')
     };
 
 
@@ -185,10 +186,11 @@ const EditProfile = props => {
                             <Form.Group>
                                 <Button variant="primary m-2" type="submit" >
                                     Submit
-                            </Button>
-                                <Link to="/dashboard"><Button variant="secondary"  >
+                                </Button>
+                                <Link to="/dashboard">
+                                    <Button variant="secondary"  >
                                     Back
-                            </Button>
+                                    </Button>
                                 </Link>
                             </Form.Group>
 

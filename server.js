@@ -3,13 +3,19 @@ const connectDB = require('./config/db')
 const app = express();
 const path = require('path');
 
+
+
+
 connectDB()
+
 
 
 
 app.use(express.json())
 
 app.get('/api/test', (req,res)=> res.send('API Running'))
+
+app.use('/uploads',express.static('uploads'))
 
 // Routes
 app.use('/api/users', require('./routes/api/users'));

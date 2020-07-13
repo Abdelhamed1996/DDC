@@ -90,11 +90,19 @@ export const deletePost = id => async dispatch => {
 export const addPost = formData => async dispatch => {
     const config = {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'multipart/form-data'
         }
     }
     try {
-        const res = await axios.post('/api/posts', formData, config);
+
+        const fd= new FormData()
+        fd.append("text", formData.text)
+        fd.append("img", formData.img)
+
+        for(var pair of fd.entries()) {
+            console.log("fd", pair[0]+ ', '+ pair[1]); 
+        }
+        const res = await axios.post('/api/posts', fd, config);
 
         dispatch({
             type: ADD_POST,
@@ -117,6 +125,7 @@ export const getPost = id => async dispatch => {
     try {
         const res = await axios.get(`/api/posts/${id}`);
 
+        console.log("get data", res.data)
         dispatch({
             type: GET_POST,
             payload: res.data

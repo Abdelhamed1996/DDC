@@ -5,6 +5,8 @@ const {check, validationResult}= require('express-validator')
 const Profile = require('../../models/Profile')
 const User = require('../../models/User')
 
+
+
 //GET api/profile
 
 router.get('/me', auth, async(req,res)=> {

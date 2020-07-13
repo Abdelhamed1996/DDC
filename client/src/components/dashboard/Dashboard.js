@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spiner'
 import { getCurrentProfile } from '../../actions/profile'
-import { Card, Button,} from 'react-bootstrap'
+import { Card, Button, Container,} from 'react-bootstrap'
 import DashboardAction from './dashboardAction'
 import Img from '../profile-forms/man 7.png'
 import Img2 from '../profile-forms/woman-8.png'
+import { initParams } from 'request';
+import Posts from '../posts/Posts';
+
 
 
 const Dashboard = props => {
@@ -23,9 +26,10 @@ const Dashboard = props => {
      if(props.profile.loading === true && props.profile === null){return <Spinner />}else {
          return(
             <>
-            <Card>
+            <Container className="dashbourd-container">
+            <Card style={{width:"100%"}}>
                 <Card.Header>Welcome {props.auth && capitalize(props.auth.name)}</Card.Header>
-                <div className="dash-items">
+                {/* <div className="dash-items">
                     <Link to='/me'><img src={props.auth.gender==='Male' ? Img : Img2} className="head_size img-fluid" alt="avatar" /></Link>
                     <Card.Body>
                         <Card.Text>
@@ -37,8 +41,10 @@ const Dashboard = props => {
                         )}
                     </Card.Text>
                     </Card.Body>
-                </div>
+                </div> */}
             </Card>
+            <Posts />
+            </Container>
     </>
     )};
 };
