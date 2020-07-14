@@ -6,37 +6,58 @@ import ProfileTop from './ProfileTop'
 import { getCurrentProfile } from '../../actions/profile'
 import { Button, } from 'react-bootstrap'
 import PropTypes from 'prop-types'
+import CreateProfile from '../profile-forms/CreateProfile'
+
 
 const MyProfile = ({getCurrentProfile, profile:{profile,loading}}) => {
-    useEffect(() => {
+     useEffect(() => {
         getCurrentProfile();
-    }, []);
+     },[getCurrentProfile]);
 
-    return (
-        <>
-            {profile === null || loading ? (
-                <Spinner />
-            ) : (<>
-                    <div class="profile-grid">
-                        <ProfileTop profile={profile}/>
+    console.log("profile", profile)
 
-                    </div>
-                    <div className="profile-btns">
-                    <Link to='/me'><Button variant="secondary" >Back</Button></Link>
-                    <Link to='/edit-profile'><Button variant="primary">Edit Profile</Button></Link>
-                    </div>
-            </>)}
-        </>
-    )
+     if(profile === null || loading ) {
+         return (<Spinner />)
+     }else {
+         if(profile === {} || !loading){
+            return <CreateProfile/>
+         }else{
+             return(<>
+                                  <div class="profile-grid">
+                                      <ProfileTop profile={profile}/>
+                                  </div>
+                                  <div className="profile-btns">
+                                  <Link to='/me'><Button variant="secondary" >Back</Button></Link>
+                                  <Link to='/edit-profile'><Button variant="primary">Edit Profile</Button></Link>
+                                  </div>
+                          </>)
+         }
+     }
+
+    // return (
+    //     <>
+    //         {profile === null || loading ? (
+    //             <Spinner />
+    //         ): (<>
+    //                 <div class="profile-grid">
+    //                     <ProfileTop profile={profile}/>
+
+    //                 </div>
+    //                 <div className="profile-btns">
+    //                 <Link to='/me'><Button variant="secondary" >Back</Button></Link>
+    //                 <Link to='/edit-profile'><Button variant="primary">Edit Profile</Button></Link>
+    //                 </div>
+    //         </>)}
+    //     </>
+    // )
 }
 
 
-MyProfile.propTypes={
-    profile: PropTypes.object.isRequired,
-    getCurrentProfile: PropTypes.func.isRequired,
-    auth: PropTypes.object.isRequired
-    
-}
+ MyProfile.propTypes={
+     profile: PropTypes.object.isRequired,
+     getCurrentProfile: PropTypes.func.isRequired,
+     auth: PropTypes.object.isRequired  
+ }
 
 const mapStateToProps = state => ({
     profile: state.profile,

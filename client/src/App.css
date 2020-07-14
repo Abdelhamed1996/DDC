@@ -416,6 +416,71 @@ img.head_size.img-fluid {
 /*PROFILE TOP     End /////////////////////////////////////////////*/
 
 
+
+
+
+
+
+/* Chat Style start /////////////////////////////////////////////*/
+.chat-container{
+    padding: 17px;
+}
+
+.user-container{
+    width: 30%;
+    background: white;
+    height: 65vh;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: scroll;
+}
+.user-container::-webkit-scrollbar {
+    display: none;
+}
+
+.user-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.chat-user-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 10px;
+    border: solid 1px gray;
+    border-radius: 50px;
+    background: gainsboro;
+    width: 100%;
+
+}
+.chat-user-container:hover{
+    background: rgb(54, 243, 63);
+    cursor: pointer;
+}
+
+.chat-user-img{
+    width: 50px;
+    padding: 5px;
+    border-radius: 50px;
+}
+.chat-user{
+    margin: auto auto auto 0 ;
+}
+
+
+/* Chat Style end /////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
 @media (max-width: 500px) {
     .respnsiv_form {
         max-width: 90%;

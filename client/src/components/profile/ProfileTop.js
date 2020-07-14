@@ -93,7 +93,7 @@ const ProfileTop = ({profile:{
                             
                         </div>
                     </div> 
-                    <ProfileGithub username={githubusername}/>
+                    {githubusername && (<ProfileGithub username={githubusername}/>)}
                 </Card>
 
             </Container>

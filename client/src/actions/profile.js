@@ -81,7 +81,7 @@ export const createProfile =(formData, history, edit = false)=>async dispatch =>
         })
 
         if(!edit){
-            history.push('/dashboard')
+            history.push('/me')
         }
     } catch (err) {
 
