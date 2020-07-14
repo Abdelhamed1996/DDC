@@ -11,6 +11,7 @@ import Twitt from '../fontawesome/twitter-brands.svg'
 import Www from '../fontawesome/www.png'
 import Location from '../fontawesome/location.svg'
 import Work from '../fontawesome/work.svg'
+import ProfileGithub from '../profile/ProfileGithub'
 
 
 const ProfileTop = ({profile:{
@@ -20,6 +21,7 @@ const ProfileTop = ({profile:{
     social,
     website,
     skills,
+    githubusername,
     bio,
     user:{name, gender}
     }}) => {
@@ -42,7 +44,7 @@ const ProfileTop = ({profile:{
                             <div className="info-profile">
                                 <h4 className="name">{capitalize(name)}</h4>
                                 <p style={{fontSize:"1rem"}}><i class="fas fa-briefcase" style={{marginRight:"5px", color:"#eeeeee"}}></i>{status} <>{company && (<i>work at {company}</i>)}</></p>
-                                <p><i class="fas fa-map-marker-alt profile-icon" style={{marginRight:"5px", color:"#eeeeee"}}></i>{location}</p>
+                                {location && (<p><i class="fas fa-map-marker-alt profile-icon" style={{marginRight:"5px", color:"#eeeeee"}}></i>{location}</p>)}
                             </div>
                         </Card>
                     </div>
@@ -86,8 +88,12 @@ const ProfileTop = ({profile:{
                             </> 
 
 
-                        </div> 
-                    </div>   
+                        </div>
+                        <div className="social">
+                            
+                        </div>
+                    </div> 
+                    <ProfileGithub username={githubusername}/>
                 </Card>
 
             </Container>

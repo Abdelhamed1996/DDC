@@ -1,5 +1,7 @@
 {
     "mongoURI":"mongodb+srv://johanLight333:johanLight333@ddc-y1mjt.mongodb.net/test?retryWrites=true&w=majority",
-    "jwtSecret": "JDhfjdsjjdsfdj24545djsfdfdjd453jjdsjje"
+    "jwtSecret": "JDhfjdsjjdsfdj24545djsfdfdjd453jjdsjje",
+    "githubClientId":"a2ca0f04428a8d192591",
+    "githubSecret":"557d63ea8717e9a907ee98ea6eb3c9ef6be1efbc"
 
 }

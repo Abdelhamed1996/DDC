@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_PROFILE,GET_PROFILES,PROFILE_ERROR} from './types';
+import { GET_PROFILE,GET_PROFILES,PROFILE_ERROR,GET_REPOS} from './types';
 
 //Get current users profile
 
@@ -92,3 +92,22 @@ export const createProfile =(formData, history, edit = false)=>async dispatch =>
         })
     }
 }
+
+
+// GET Github Repos
+
+export const getGithubRepos = username => async dispatch => {
+    try {
+      const res = await axios.get(`/api/profile/github/${username}`);
+  
+      dispatch({
+        type: GET_REPOS,
+        payload: res.data
+      });
+    } catch (err) {
+      dispatch({
+        type: PROFILE_ERROR,
+        payload:{msg:err.response.statusText, status: err.response.status}
+      });
+    }
+  };
