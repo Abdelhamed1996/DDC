@@ -1,12 +1,15 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import {connect} from 'react-redux'
 import Src from '../../images/Students.svg'
 
 export const Landing = (props) => {
 
-    if (props.isAuht) {
-        props.history.push('/dashboard')
-    }
+   
+    
+
+    // if (props.isAuht) {
+    //     props.history.push('/dashboard')
+    // }
     return (
         <>
             <div className="text text-center text-white display-4 font-weight-bold">DCI Developer Community</div>

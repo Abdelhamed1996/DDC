@@ -10,7 +10,7 @@ const PostForm = ({addPost}) => {
 
     
     return (
-        <div className="post-form" style={{width:"100%"}}>
+        <div className="post-form" >
             <form className="form my-1" onSubmit={e=>{
                 e.preventDefault();
 
@@ -38,7 +38,7 @@ const PostForm = ({addPost}) => {
                 name="img" 
                 placeholder="upload an image" 
                 onChange={e=>setImg(e.target.files[0])}/> 
-                <input type="submit" className="btn btn-dark my-1" value="Post" style={{width:"100%"}}/>
+                <input type="submit" className="btn  my-1" value="Post" style={{width:"100%", background:"#42a5f5"}}/>
             </form>
         </div>
     )

@@ -1,3 +1,5 @@
+import React from 'react'
+
 import{
     REGISTER_SUCCESS,
     REGISTER_FAIL,
@@ -44,6 +46,7 @@ export default function(state= initialState, action){
         case LOGIN_FAIL:
         case LOGOUT:
             localStorage.removeItem('token')
+           
             return{
                 ...state,
                 ...payload,
