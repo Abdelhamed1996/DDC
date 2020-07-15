@@ -9,6 +9,7 @@ import Img from '../profile-forms/man 7.png'
 import Img2 from '../profile-forms/woman-8.png'
 import { initParams } from 'request';
 import Posts from '../posts/Posts';
+import PostForm from '../posts/PostForm';
 
 
 
@@ -27,8 +28,9 @@ const Dashboard = props => {
          return(
             <>
             <Container className="dashbourd-container">
-            <Card style={{width:"100%"}}>
-                <Card.Header>Welcome {props.auth && capitalize(props.auth.name)}</Card.Header>
+            <Card style={{height:"40vh"}}>
+                <Card.Header style={{padding:"17px 0 17px 17px"}}>Welcome {props.auth && capitalize(props.auth.name)}</Card.Header>
+                <PostForm/>
                 {/* <div className="dash-items">
                     <Link to='/me'><img src={props.auth.gender==='Male' ? Img : Img2} className="head_size img-fluid" alt="avatar" /></Link>
                     <Card.Body>

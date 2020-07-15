@@ -16,39 +16,22 @@ const MyProfile = ({getCurrentProfile, profile:{profile,loading}}) => {
 
     console.log("profile", profile)
 
-     if(profile === null || loading ) {
-         return (<Spinner />)
-     }else if(profile === null || loading === false){
-        return <CreateProfile/>
-     } else{
-             return(<>
-                        <div class="profile-grid">
-                            <ProfileTop profile={profile}/>
-                        </div>
-                        <div className="profile-btns">
-                        <Link to='/me'><Button variant="secondary" >Back</Button></Link>
-                        <Link to='/edit-profile'><Button variant="primary">Edit Profile</Button></Link>
-                        </div>
-                    </>)
-         }
+      if(profile === null && loading ) {
+          return (<Spinner />)
+      }else if(profile === null && loading === false){
+         return <CreateProfile/>
+      } else if(profile && !loading){
+              return(<>
+                         <div class="profile-grid">
+                             <ProfileTop profile={profile}/>
+                         </div>
+                         <div className="profile-btns">
+                         <Link to='/me'><Button variant="secondary" >Back</Button></Link>
+                         <Link to='/edit-profile'><Button variant="primary">Edit Profile</Button></Link>
+                         </div>
+                     </>)
+          }
      
-
-    // return (
-    //     <>
-    //         {profile === null || loading ? (
-    //             <Spinner />
-    //         ): (<>
-    //                 <div class="profile-grid">
-    //                     <ProfileTop profile={profile}/>
-
-    //                 </div>
-    //                 <div className="profile-btns">
-    //                 <Link to='/me'><Button variant="secondary" >Back</Button></Link>
-    //                 <Link to='/edit-profile'><Button variant="primary">Edit Profile</Button></Link>
-    //                 </div>
-    //         </>)}
-    //     </>
-    // )
 }
 
 

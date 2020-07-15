@@ -35,7 +35,7 @@ const ProfileTop = ({profile:{
         <>
             <Container>
                 <Card className="mb-5 pb-4">
-                    <div className="text-center profile-top top">
+
                         <Card className="card-profile" >
                             <div className="card-k">
                                 <img src={gender==='Male' ? Img : Img2} className="user_size  img-fluid" alt="avatar" />
@@ -47,7 +47,7 @@ const ProfileTop = ({profile:{
                                 {location && (<p><i class="fas fa-map-marker-alt profile-icon" style={{marginRight:"5px", color:"#eeeeee"}}></i>{location}</p>)}
                             </div>
                         </Card>
-                    </div>
+                    
                     
                     <div className="skills-block">
                         <p className="text-center skillp">SKILLS</p>

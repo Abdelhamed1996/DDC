@@ -37,7 +37,7 @@ const App = props => {
         <>
         <section className='container-fluid p-0' style={!props.auth.isAuht ? {background:"#43a5f5"} :{background:"white",height:"100%"}}>
           <Nav />
-          <Route exact path='/' component={Landing} />
+
 
             <Switch>
               <Route exact path='/register' component={Register} />
@@ -49,6 +49,7 @@ const App = props => {
               <PrivateRoute exact path='/create-profile' component={CreateProfile} />
               <PrivateRoute exact path='/edit-profile' component={EditProfile} />
               <PrivateRoute exact path='/chat' component={Chat} />
+              <Route exact path='/' component={Landing} />
             </Switch>
             </section>
         </>

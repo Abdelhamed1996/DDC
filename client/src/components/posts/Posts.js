@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import Spinner from '../layout/Spiner'
 import PostItem from './PostItem';
 import {getPosts} from '../../actions/post';
-import PostForm from './PostForm';
+
 
 const Posts = ({getPosts,post:{posts,loading}}) => {
 
@@ -13,7 +13,7 @@ const Posts = ({getPosts,post:{posts,loading}}) => {
     },[getPosts]);
 
     return loading? <Spinner/>:<>
-       <PostForm/>
+
         <div className="posts">
             {posts.map(post=>(
                 <PostItem key={post._id} post={post}/>
