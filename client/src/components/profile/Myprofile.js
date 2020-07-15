@@ -18,21 +18,20 @@ const MyProfile = ({getCurrentProfile, profile:{profile,loading}}) => {
 
      if(profile === null || loading ) {
          return (<Spinner />)
-     }else {
-         if(profile === {} || !loading){
-            return <CreateProfile/>
-         }else{
+     }else if(profile === null || loading === false){
+        return <CreateProfile/>
+     } else{
              return(<>
-                                  <div class="profile-grid">
-                                      <ProfileTop profile={profile}/>
-                                  </div>
-                                  <div className="profile-btns">
-                                  <Link to='/me'><Button variant="secondary" >Back</Button></Link>
-                                  <Link to='/edit-profile'><Button variant="primary">Edit Profile</Button></Link>
-                                  </div>
-                          </>)
+                        <div class="profile-grid">
+                            <ProfileTop profile={profile}/>
+                        </div>
+                        <div className="profile-btns">
+                        <Link to='/me'><Button variant="secondary" >Back</Button></Link>
+                        <Link to='/edit-profile'><Button variant="primary">Edit Profile</Button></Link>
+                        </div>
+                    </>)
          }
-     }
+     
 
     // return (
     //     <>

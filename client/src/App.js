@@ -17,25 +17,28 @@ import { Provider } from 'react-redux';
 import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
+import { connect } from 'react-redux';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token)
 }
 
 
-const App = () => {
+const App = props => {
 
   useEffect(() => {
     store.dispatch(loadUser())
   }, [])
 
+  console.log("props",props)
   return (
-    <Provider store={store}>
+
       <Router>
         <>
+        <section className='container-fluid p-0' style={!props.auth.isAuht ? {background:"#43a5f5"} :{background:"white",height:"100%"}}>
           <Nav />
           <Route exact path='/' component={Landing} />
-          <section className='container'>
+
             <Switch>
               <Route exact path='/register' component={Register} />
               <Route exact path='/login' component={Login} />
@@ -47,12 +50,16 @@ const App = () => {
               <PrivateRoute exact path='/edit-profile' component={EditProfile} />
               <PrivateRoute exact path='/chat' component={Chat} />
             </Switch>
-          </section>
+            </section>
         </>
       </Router>
-    </Provider>
+
 
   );
 }
 
-export default App;
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(mapStateToProps,{})(App);

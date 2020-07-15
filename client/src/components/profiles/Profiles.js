@@ -22,13 +22,14 @@ const Profiles = props => {
         <>
             {props.profile.loading ? <Spinner /> :
             <>
-                <h1 className="profiles-h1">Developers</h1>
-                <p className="profiles-p1">Browse and connect with DCI students</p>
+
                 <div className="profiles">
+                    <div style={{padding:"0 18px 0 18px"}}>
+                        <h1 className="profiles-h1">Developers</h1>
+                        <p className="profiles-p1">Browse and connect with DCI students</p>
+                    </div>
                     {props.profile.profiles.length > 0 ? (
                         props.profile.profiles.map(profile => (
-
-
                             <Container fluid className="dci-container" key={profile.user._id} >
                                <Row className="dci-student">
                                     <Col className="student-foto d-flex justify-content-start ml-4 align-self-center ">

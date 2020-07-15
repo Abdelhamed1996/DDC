@@ -10,11 +10,11 @@ const Navbar1 = (props) => {
 
     const authLinks =(
         <>  
-            <Nav.Link><NavLink exact to="/me" className="NavLink border-0 " ><i class="fas fa-user"></i><span className="navbar-span">Me</span></NavLink></Nav.Link>
-            <Nav.Link><NavLink exact to="/dashboard" className="NavLink border-0 " ><i class="fas fa-home"></i><span className="navbar-span">Home</span></NavLink></Nav.Link>
-            <Nav.Link><NavLink exact to="/profiles" className="NavLink border-0 " ><i class="fas fa-users"></i><span className="navbar-span">DCI Students</span></NavLink></Nav.Link>
-            <Nav.Link><NavLink exact to="/chat" className="NavLink border-0 " ><i class="fas fa-comment"></i><span className="navbar-span">Chat</span></NavLink></Nav.Link>
-            <Nav.Link><NavLink exact to="/"   className="NavLink border-0 " onClick={props.logout}><i class="fas fa-sign-out-alt"></i><span className="navbar-span">Logout</span></NavLink></Nav.Link>
+            <Nav.Link><NavLink exact to="/dashboard" className="NavLink border-0 " style={props.auth.isAuht ? {color:"#5f5f5f"}: null}><i class="fas fa-home"></i><span className="navbar-span">Home</span></NavLink></Nav.Link>
+            <Nav.Link><NavLink exact to="/me" className="NavLink border-0 " style={props.auth.isAuht ? {color:"#5f5f5f"}: null}><i class="fas fa-user"></i><span className="navbar-span " >Me</span></NavLink></Nav.Link>
+            <Nav.Link><NavLink exact to="/profiles" className="NavLink border-0 " style={props.auth.isAuht ? {color:"#5f5f5f"}: null}><i class="fas fa-users"></i><span className="navbar-span">DCI Students</span></NavLink></Nav.Link>
+            <Nav.Link><NavLink exact to="/chat" className="NavLink border-0 " style={props.auth.isAuht ? {color:"#5f5f5f"}: null}><i class="fas fa-comment"></i><span className="navbar-span">Chat</span></NavLink></Nav.Link>
+            <Nav.Link><NavLink exact to="/"   className="NavLink border-0 " onClick={props.logout} style={props.auth.isAuht ? {color:"#5f5f5f"}: null}><i class="fas fa-sign-out-alt"></i><span className="navbar-span">Logout</span></NavLink></Nav.Link>
         </>
 
     )
@@ -28,7 +28,7 @@ const Navbar1 = (props) => {
 
 
     return (
-        <Navbar  collapseOnSelect expand="lg "  >
+        <Navbar  collapseOnSelect expand="lg " style={!props.auth.isAuht ? {background:"#42A5F5"} : {background:"white", color:"black"}} >
             <Navbar.Brand href="/"><img src={Src} className="logo_size" alt="logo"/></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav"  >

@@ -42,8 +42,9 @@ const Login = props => {
 
     return (
         <>
-            <div className="text text-center text-white display-4 mb-5 font-weight-bold">DCI Developer Community</div>
-            <Form className=" Form1 p-3  mb-5 respnsiv_form respnsiv_form3 rounded" onSubmit={onSubmit}>
+            <div className="text text-center text-white display-4 font-weight-bold">DCI Developer Community</div>
+            <div className="form-div"   style={{paddingBottom:"5vw"}}>
+            <Form className=" Form1 p-3  mt-4 respnsiv_form respnsiv_form3 rounded" onSubmit={onSubmit}>
                 <h1 className="text-center mt-5 mb-4">Sign in</h1>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -77,6 +78,7 @@ const Login = props => {
                 </Form.Group>
 
             </Form>
+            </div>
         </>
     );
 }

@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spiner';
 import { getProfiles } from '../../actions/profile';
-import { Container, Col, Button, Row, } from 'react-bootstrap'
 import Img from '../profile-forms/man 7.png'
 import Img2 from '../profile-forms/woman-8.png'
+import { Button,InputGroup,FormControl } from 'react-bootstrap';
 import {Link} from 'react-router-dom'
 
 import './styles.css'
@@ -23,7 +23,7 @@ const Chat= props=>{
         <>
             {props.profile.loading ? <Spinner /> :
             <>
-                <h1 className="profiles-h1">Developers</h1>
+
                 <div className="chat-container">
                     <div className="user-container">
                         {props.profile.profiles.length > 0 ? (
@@ -38,8 +38,33 @@ const Chat= props=>{
                         ):(<h4>No users found</h4>
                         )}
                     </div>
+                    <div className="line"></div>
                     <div className="text-container">
-
+                            
+                            <div className="messages">
+                                <div className="message">
+                                    hi
+                                </div>
+                                <div className="message">
+                                    hi
+                                </div>
+                                <div className="message">
+                                    hi
+                                </div>
+                            </div>
+                            <div>
+                                <InputGroup>
+                                  <FormControl
+                                    placeholder="Write something . . ."
+                                    aria-label="Write something"
+                                    aria-describedby="basic-addon2"
+                                  />
+                                  <InputGroup.Append>
+                                    <Button variant="outline-secondary"><i class="fas fa-icons"></i></Button>
+                                    <Button variant="outline-secondary"><i class="fas fa-paper-plane"></i></Button>
+                                  </InputGroup.Append>
+                                </InputGroup>
+                            </div>
                     </div>
                 </div>
             </>

@@ -37,8 +37,9 @@ const Register = props => {
 
     return (
         <>
-            <div className="text text-center text-white display-4 mb-5 font-weight-bold">DCI Developer Community</div>
-            <Form className=" Form1 p-3 mt-5 mb-5 respnsiv_form2  respnsiv_form3 rounded " onSubmit={onSubmit}>
+            <div className="text text-center text-white display-4  font-weight-bold">DCI Developer Community</div>
+            <div className="form-div"   style={{paddingBottom:"5vw"}}>
+            <Form className=" Form1 p-3 mt-4  respnsiv_form2  respnsiv_form3 rounded " onSubmit={onSubmit}>
                 <h1 className="text-center mt-5 mb-3">Sign Up</h1>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Gender</Form.Label>
@@ -99,6 +100,7 @@ const Register = props => {
                 </Form.Group>
 
             </Form>
+            </div>
         </>
     );
 }
