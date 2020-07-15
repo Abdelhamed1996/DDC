@@ -1,5 +1,5 @@
 body {
-    background-color:white !important;
+    background-color: white !important;
     font-family: 'Montserrat';
 }
 
@@ -156,7 +156,7 @@ body {
 /*DCI Student LIST  START /////////////////////////////////////////////*/
 
 .profiles-h1 {
-    color:#5f5f5f;
+    color: #5f5f5f;
 }
 
 .profiles-p1 {
@@ -176,13 +176,22 @@ body {
     opacity: 0;
 }
 
+path {
+    color: #42A5F5 !important;
+
+}
+
 .dci-student {
 
-    border: 1px solid #42A5F5;
+    box-shadow: 0px 1px 6px #adadad;
     border-radius: 0.6rem;
     margin-top: 2rem !important;
     margin: 0.5rem;
     background-color: #EEEEEE;
+}
+.dci-student:hover{
+    transform: scale(1.02);
+    transition: all .1s ease-in-out;
 }
 
 .student-foto {
@@ -262,6 +271,7 @@ img.head_size.img-fluid {
 
 .mb-5 {
     padding: 3rem;
+    box-shadow: 5px 5px 8px #adadad;
 }
 
 .card-k {
@@ -398,26 +408,29 @@ img.head_size.img-fluid {
     color: blue;
 }
 
-.card-title{
+.card-title {
     display: flex;
     flex-direction: row;
 
 }
-.card-title> img{
+
+.card-title>img {
     width: 7vw;
     height: 7vw;
     margin-right: 1vw;
     padding: 5px;
     border-radius: 50%;
     background: white;
-    
+
 }
-.post-header{
+
+.post-header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-.post-user-nam{
+
+.post-user-nam {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -427,13 +440,33 @@ img.head_size.img-fluid {
 /*PROFILE TOP     End /////////////////////////////////////////////*/
 
 
+/*Profile GitHUB START ////////////////////////////////////////////*/
+
+.text-primary {
+    color: #424242 !important;
+}
+
+
+
+
+
+
+
+/*Profile GitHUB START ////////////////////////////////////////////*/
+
+.profile-github {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #dedede;
+    
+}
 
 
 
 
 
 /* Chat Style start /////////////////////////////////////////////*/
-.chat-container{
+.chat-container {
     padding: 17px;
     display: flex;
     flex-direction: row;
@@ -442,7 +475,7 @@ img.head_size.img-fluid {
     height: 80vh;
 }
 
-.user-container{
+.user-container {
     width: 23%;
     background: white;
     height: 100%;
@@ -452,16 +485,19 @@ img.head_size.img-fluid {
     border: solid 1px #42A5F5;
     border-radius: 15px;
 }
+
 .user-container::-webkit-scrollbar {
     display: none;
 }
 
 .user-container {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
-.chat-user-container{
+.chat-user-container {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -475,23 +511,26 @@ img.head_size.img-fluid {
 
 
 }
-.chat-user-container:hover{
+
+.chat-user-container:hover {
     background: rgb(54, 243, 63);
     cursor: pointer;
 }
 
 
-.chat-user-img{
+.chat-user-img {
     width: 50px;
     padding: 2px;
     border-radius: 50px;
-    background:white;
+    background: white;
 }
-.chat-user{
-    margin: auto auto auto 5px ;
+
+.chat-user {
+    margin: auto auto auto 5px;
 
 }
-.text-container{
+
+.text-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -502,15 +541,17 @@ img.head_size.img-fluid {
     overflow: hidden;
     padding: 10px;
 }
-.messages{
+
+.messages {
     width: 100%;
     height: 100%;
-    background:gainsboro;
+    background: gainsboro;
     background-size: cover;
-    border-radius: 5px 5px 0 0 ;
+    border-radius: 5px 5px 0 0;
     padding: 17px;
 }
-.message{
+
+.message {
     width: 30%;
     border-radius: 50px;
     background: rgb(54, 243, 63);
@@ -519,7 +560,7 @@ img.head_size.img-fluid {
     margin-bottom: 5px;
 }
 
-.line{
+.line {
     border-bottom: solid 1px #42A5F5;
     width: 6%;
     height: 1px;
@@ -596,20 +637,22 @@ img.head_size.img-fluid {
         text-align: center;
         margin-left: 0;
     }
-    .card-title> img{
+
+    .card-title>img {
         width: 14vw;
         height: 14vw;
         margin-right: 3vw;
-        
+
     }
-    .post-card{
+
+    .post-card {
         padding: 0;
     }
 
-    .post-card > .card-body{
+    .post-card>.card-body {
         padding: 0.5vw;
     }
-    
+
 
 
 }
@@ -633,6 +676,7 @@ img.head_size.img-fluid {
         padding-bottom: 0rem;
         border: 0;
         border-radius: 0;
+        box-shadow: none;
     }
 
     .student-foto {
@@ -663,7 +707,8 @@ img.head_size.img-fluid {
     .skils-item {
         padding: 1rem;
     }
-    .post-card > .card-body{
+
+    .post-card>.card-body {
         padding: 5vw;
     }
 }
@@ -671,7 +716,7 @@ img.head_size.img-fluid {
 /*////////////////////////////////////////////////DCI Student LIST  for  MAX 700 px!!    END //////*/
 
 /*////////////////////////////////////////////////POST Article    START       //////*/
-.dashbourd-container{
+.dashbourd-container {
     width: 50vw;
     display: flex;
     flex-direction: column;
@@ -679,7 +724,7 @@ img.head_size.img-fluid {
     padding: 0;
 }
 
-.posts{
+.posts {
     width: 50vw;
     padding-top: 17px;
     border-radius: 5px;
@@ -692,8 +737,10 @@ img.head_size.img-fluid {
 }
 
 .posts {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .post-container {
@@ -702,30 +749,34 @@ img.head_size.img-fluid {
     padding-bottom: 17px;
 }
 
-.post-card{
-    background: gainsboro;
+.post-card {
+    background: #eeeeee;
+    box-shadow: 0px 1px 6px #adadad;
+
 }
 
-.post-text-area{
+.post-text-area {
     outline: none;
     border-radius: 5px;
     height: 92px;
     border: none;
 }
 
-.posts-bottoms{
+.posts-bottoms {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-top: solid 1px gray;
+    border-top: solid 1px #c1c1c1;
     padding-top: 5px;
 }
-.like-div{
+
+.like-div {
     display: flex;
     flex-direction: row;
 }
-.post-img{
+
+.post-img {
     margin: 17px 0 17px 0;
 }
 
@@ -798,41 +849,50 @@ textarea {
         margin-left: -10px;
         margin-bottom: -20px;
     }
-    .posts-head{
-        width:8rem;
+
+    .posts-head {
+        width: 8rem;
     }
-    .head_size.img-fluid.post{
-        padding:0.8rem;
+
+    .head_size.img-fluid.post {
+        padding: 0.8rem;
     }
 
     .post-container {
         padding: 1rem !important;
     }
-    .h5{
-        font-size: 1rem!important;
+
+    .h5 {
+        font-size: 1rem !important;
     }
-    .posts-content{
+
+    .posts-content {
         display: flex;
         flex-direction: column;
-        padding:1rem!important;
+        padding: 1rem !important;
     }
-    .content-b{
+
+    .content-b {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
     }
+
     .svg-inline--fa.fa-w-16 {
         width: 1rem;
     }
-    .post-h{
-        padding:0;
+
+    .post-h {
+        padding: 0;
     }
-    button.btn.btn-danger{
-        margin:0!important;
-        padding:0.2rem!important;
+
+    button.btn.btn-danger {
+        margin: 0 !important;
+        padding: 0.2rem !important;
     }
-    .date-m{
+
+    .date-m {
         font-size: 0.8rem;
     }
 
