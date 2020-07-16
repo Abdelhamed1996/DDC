@@ -7,6 +7,9 @@ import {logout} from '../../actions/auth'
 import {useDispatch} from 'react-redux'
 
 
+
+
+
 const Navbar1 = (props) => {
 
     let history = useHistory()
@@ -17,6 +20,13 @@ const Navbar1 = (props) => {
         window.location.reload()
     }
 
+
+    let classNames ={
+        
+    }
+
+
+
     const authLinks =(
         <>  
             <Nav.Link><NavLink exact to="/dashboard" className="NavLink border-0 " style={props.auth.isAuht ? {color:"#5f5f5f"}: null}><i class="fas fa-home"></i><span className="navbar-span">Home</span></NavLink></Nav.Link>
@@ -24,6 +34,12 @@ const Navbar1 = (props) => {
             <Nav.Link><NavLink exact to="/profiles" className="NavLink border-0 " style={props.auth.isAuht ? {color:"#5f5f5f"}: null}><i class="fas fa-users"></i><span className="navbar-span">DCI Students</span></NavLink></Nav.Link>
             <Nav.Link><NavLink exact to="/chat" className="NavLink border-0 " style={props.auth.isAuht ? {color:"#5f5f5f"}: null}><i class="fas fa-comment"></i><span className="navbar-span">Chat</span></NavLink></Nav.Link>
             <Nav.Link><Link exact to="/"   className="NavLink border-0 " onClick={logOut} style={props.auth.isAuht ? {color:"#5f5f5f"}: null}><i class="fas fa-sign-out-alt"></i><span className="navbar-span">Logout</span></Link></Nav.Link>
+            <Nav.Link>
+                <div className="LDmood">
+                    <div className="switch" ><i className="fas fa-moon" ></i></div>
+                </div>
+            </Nav.Link>
+
         </>
 
     )

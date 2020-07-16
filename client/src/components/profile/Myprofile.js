@@ -26,7 +26,7 @@ const MyProfile = ({getCurrentProfile, profile:{profile,loading}}) => {
                              <ProfileTop profile={profile}/>
                          </div>
                          <div className="profile-btns">
-                         <Link to='/me'><Button variant="secondary" >Back</Button></Link>
+                         <Link to='/dashboard'><Button variant="secondary" >Back</Button></Link>
                          <Link to='/edit-profile'><Button variant="primary">Edit Profile</Button></Link>
                          </div>
                      </>)

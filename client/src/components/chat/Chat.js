@@ -7,7 +7,6 @@ import Img2 from '../profile-forms/woman-8.png'
 import { Button,InputGroup,FormControl } from 'react-bootstrap';
 import {Link} from 'react-router-dom'
 
-import './styles.css'
 
 const Chat= props=>{
     useEffect(() => {

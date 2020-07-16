@@ -1,3 +1,12 @@
+:root{
+    --dark-page-bg:#111111;
+    --dark-header-bg:#232323;
+    --light-page-bg:hsl(0, 100%, 100%);
+    --light-header-bg:hsl(0, 0%, 54%);
+     font-family: Arial, Helvetica, sans-serif;
+     
+}
+
 body {
     background-color: rgb(67, 165, 245) !important;
     font-family: 'Montserrat';
@@ -9,6 +18,167 @@ body {
     margin: 10px;
     font-weight: bold;
 
+}
+
+.LDmood{
+    
+    margin: 5px;
+    width: 60px;
+    height: 30px;
+    padding: 2px;
+    border-radius: 50px;
+    background: black;
+    transition: .5s;
+    flex-basis: 60px;
+    
+    
+}
+.switch{
+    position: absolute;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   background: white;
+   transition: .5s;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+    
+}
+:root{
+    --dark-page-bg:#111111;
+    --dark-header-bg:#232323;
+    --light-page-bg:hsl(0, 100%, 100%);
+    --light-header-bg:hsl(0, 0%, 54%);
+     font-family: Arial, Helvetica, sans-serif;
+     
+}
+.dark{
+    background: var(--dark-page-bg);
+}
+
+
+body.light main{
+    background: var(--light-page-bg);
+}
+
+body.dark main{
+    background: var(--dark-page-bg);
+}
+
+.switch{
+    position: absolute;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   background: white;
+   transition: .5s;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+    
+}
+.dark .switch{
+    margin-left: 30px;
+    background: #111111;
+    
+}
+
+body{
+    padding: 0;
+    margin: 0;
+
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow:0px 5px 10px grey;
+    
+    height: 90px;
+    
+    
+}
+
+.dark header{
+    box-shadow:0px 5px 10px rgba(255, 255, 255, 0.637);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    width: 50%
+}
+nav ul li{
+    width: 70px;
+    margin-right: 50px;
+    list-style: none;
+    flex-basis: auto;
+
+}
+a{
+    text-decoration: none;
+    color: var(--light-header-bg)
+}
+
+.logo{
+    background: rgb(209, 207, 207);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin:5px;
+    
+    
+}
+main{
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+}
+.tester{
+    width: 400px;
+    height: 300px;
+    background: rgb(180, 175, 175);
+    margin: 20px;
+    border-radius: 5px;
+    
+}
+.LDmood{
+    
+    margin: 5px;
+    width: 60px;
+    height: 32px;
+    padding: 2px;
+    border-radius: 50px;
+    background: black;
+    transition: .5s;
+    flex-basis: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+.dark .LDmood{
+    background: white;
+}
+.dark .fa-moon{
+    font-size: 20px;
+    color: rgb(255, 196, 0);
+}
+.fa-moon{
+    transition: .4s;
+    color:black;
+}
+.dark a{
+    color: #f9fbfd;
 }
 
 
