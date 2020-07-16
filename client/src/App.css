@@ -1,5 +1,5 @@
 body {
-    background-color: white !important;
+    background-color: rgb(67, 165, 245) !important;
     font-family: 'Montserrat';
 }
 
@@ -189,7 +189,8 @@ path {
     margin: 0.5rem;
     background-color: #EEEEEE;
 }
-.dci-student:hover{
+
+.dci-student:hover {
     transform: scale(1.02);
     transition: all .1s ease-in-out;
 }
@@ -272,7 +273,7 @@ img.head_size.img-fluid {
 .mb-5 {
     padding: 3rem;
     box-shadow: 0px 1px 6px #adadad;
-    
+
 }
 
 .card-k {
@@ -460,13 +461,15 @@ img.head_size.img-fluid {
     margin-bottom: 2rem;
     border: 1px solid #dedede;
     padding-bottom: 1rem;
-    
+
 }
-.repo.bg-white.p-1{
-    border-bottom: 1px solid rgb(196, 196, 196)!important;
+
+.repo.bg-white.p-1 {
+    border-bottom: 1px solid rgb(196, 196, 196) !important;
 }
-h4>a{
-    color:black !important;
+
+h4>a {
+    color: black !important;
 }
 
 
@@ -633,7 +636,7 @@ h4>a{
 
     .card {
         padding: 2rem 0 0 0;
-       
+
     }
 
     .card-profile {
@@ -660,6 +663,10 @@ h4>a{
 
     .post-card>.card-body {
         padding: 0.5vw;
+    }
+
+    h4>a {
+        font-size: 18px;
     }
 
 
@@ -720,12 +727,22 @@ h4>a{
     .post-card>.card-body {
         padding: 5vw;
     }
+
+    .dashbourd-container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .posts {
+        margin-top: 2rem !important;
+    }
+
 }
 
 /*////////////////////////////////////////////////DCI Student LIST  for  MAX 700 px!!    END //////*/
 
 /*////////////////////////////////////////////////POST Article    START       //////*/
-.dashbourd-container{
+.dashbourd-container {
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -734,7 +751,7 @@ h4>a{
     padding: 0;
 }
 
-.posts{
+.posts {
     width: 70vw;
     border-radius: 5px;
     overflow-y: scroll;
