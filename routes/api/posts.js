@@ -9,6 +9,49 @@ const checkObjectId = require('../../middleware/checkObjectId');
 var multer  = require('multer')
 var upload = multer({ dest: 'uploads/' })
 
+const chat = {
+  lobby: {
+    messages: [
+      { user:"asd35asd4", text:"hi", date: Date.now() }
+    ],
+    members: {
+      asd35asd4: { name:"anx", avatar: "https://avatars3.githubusercontent.com/u/4190620?s=460&v=4" }
+    }
+  }
+};
+
+router.post('/direct_message', auth, async ( req, res ) => {
+  const { id, name, avatar } = req.user;
+  let { text, channel } = req.body;
+  const otherId = channel;
+  channel = [channel,id]
+    .sort( (a,b) => a.localeCompare(b) )
+    .join( "-" )
+  if ( ! chat[channel] ){
+    chat[channel] = { members:{}, messages:[] };
+    chat[channel].members[req.user.id] = { id, name, lastMessage: Date.now() };
+    const other = User.findById(otherId);
+    chat[channel].members[otherId] = { id:other.id, name:other.name, lastMessage: Date.now() };
+
+  }
+  if ( text !== ''){
+    chat[channel].members[req.user.id] = { id, name, lastMessage: Date.now() };
+    chat[channel].messages.unshift({ user: req.user.id, text, date: Date.now() });
+    // console.log(channel, req.user.name, req.body );
+  }
+  res.send(chat[channel]);
+});
+
+router.post('/message', auth, async ( req, res ) => {
+  const { id, name, avatar } = req.user;
+  const { text, channel="lobby" } = req.body;
+  if ( text !== ''){
+    chat[channel].members[req.user.id] = { id, name, lastMessage: Date.now() };
+    chat[channel].messages.unshift({ user: req.user.id, text, date: Date.now() });
+    console.log(channel, req.user.name, req.body );
+  }
+  res.send(chat[channel]);
+});
 
 //POST api/posts
 

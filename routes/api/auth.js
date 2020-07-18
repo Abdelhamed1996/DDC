@@ -54,7 +54,7 @@ router.post(
                 return res.status(400).json({errors:[{msg:'Invalid Credentials'}]})
             }
         // Return jsonwebtoken
-            const payload ={
+            const payload = {
                 user:{
                     id: user.id
                 }

@@ -5,9 +5,9 @@ import {getGithubRepos} from '../../actions/profile'
 import Spinner from '../layout/Spiner'
 
 const ProfileGithub=({username, getGithubRepos, repos})=>{
-    useEffect(()=>{
+    useEffect( ()=> {
         getGithubRepos(username)
-    },[getGithubRepos(username)])
+    },[username]);
     return <>
             <div className="profile-github">
                 <h2 className="text-primary my-1 text-center mt-4 mb-4">Github Repos</h2>

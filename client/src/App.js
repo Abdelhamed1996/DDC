@@ -12,6 +12,7 @@ import EditProfile from './components/profile-forms/EditProfile';
 import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import MyProfile from './components/profile/Myprofile';
+import Contacts from './components/chat/Contacts';
 import Chat from './components/chat/Chat';
 import { Provider } from 'react-redux';
 import store from './store';
@@ -48,7 +49,8 @@ const App = props => {
               <PrivateRoute exact path='/dashboard' component={Dashboard} />
               <PrivateRoute exact path='/create-profile' component={CreateProfile} />
               <PrivateRoute exact path='/edit-profile' component={EditProfile} />
-              <PrivateRoute exact path='/chat' component={Chat} />
+              <PrivateRoute exact path='/contacts' component={Contacts} />
+              <PrivateRoute exact path='/chat/:id' component={Chat} />
               <Route exact path='/' component={Landing} />
             </Switch>
             </section>

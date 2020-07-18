@@ -21,7 +21,7 @@ const PostItem = ({
             <Card className="post-card">
                 <Card.Body >
                         <Card.Title className="card-title">
-                            <Card.Img src={Img}  alt="avatar" /><div className="post-user-nam"><p style={{marginBottom:"0"}}>{name}</p><p style={{color:'gray'}}><Moment format='YYYY/MM/DD'>{date}</Moment></p></div>
+                            <Card.Img src={Img}  alt="avatar" /><div className="post-user-nam"><p style={{marginBottom:"0"}}>{name}</p><p style={{color:'gray', fontSize: "14px"}}><Moment  format='YYYY/MM/DD HH:mm'>{date}</Moment></p></div>
                         </Card.Title>                    
                     <Card.Text>{text}</Card.Text>
                     <Card.Img src={img} className="post-img"></Card.Img> 

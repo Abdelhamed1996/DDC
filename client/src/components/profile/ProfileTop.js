@@ -43,8 +43,8 @@ const ProfileTop = ({profile:{
                             </div>
                             <div className="info-profile">
                                 <h4 className="name">{capitalize(name)}</h4>
-                                <p style={{fontSize:"1rem"}}><i class="fas fa-briefcase" style={{marginRight:"5px", color:"#eeeeee"}}></i>{status} <>{company && (<i>work at {company}</i>)}</></p>
-                                {location && (<p><i class="fas fa-map-marker-alt profile-icon" style={{marginRight:"5px", color:"#eeeeee"}}></i>{location}</p>)}
+                                <p style={{fontSize:"1rem"}}><span style={{marginRight:"5px", color:"#eeeeee"}}><i className="fas fa-briefcase" ></i></span>{status} <>{company && (<i>work at {company}</i>)}</></p>
+                                {location && (<p><i className="fas fa-map-marker-alt profile-icon" style={{marginRight:"5px", color:"#eeeeee"}}></i>{location}</p>)}
                             </div>
                         </Card>
                     

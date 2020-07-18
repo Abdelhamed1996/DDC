@@ -6,24 +6,20 @@ import Img from '../profile-forms/man 7.png'
 import Img2 from '../profile-forms/woman-8.png'
 import { Button,InputGroup,FormControl } from 'react-bootstrap';
 import {Link} from 'react-router-dom'
-import Moment from 'react-moment'
+
 import axios from 'axios';
 
 let timer = null;
 
 const Chat = props => {
-    const otherId = props.match.params.id;
     const [text,setText]         = React.useState("");
     const [messages,setMessages] = React.useState(false);
     const [members,setMembers]   = React.useState({});
-
-    const change = e => {
-        setText(e.target.value);
-    };
+    const change = e => setText(e.target.value);
     const send = text => {
         axios.post(
-            "/api/posts/direct_message",
-            { text, channel:otherId }
+            "/api/posts/message",
+            { text, channel:"lobby" }
         ).then( result => {
             setMessages(result.data.messages);
             setMembers(result.data.members);
@@ -34,7 +30,7 @@ const Chat = props => {
         send();
         timer = setInterval( t => send(''), 1000 );
         return e => clearInterval(timer);
-    }, [props.match.params.id]);
+    }, []);
 
     const capitalize= (s)=>
     {
@@ -48,9 +44,9 @@ const Chat = props => {
         <>
             {props.profile.loading ? <Spinner /> :
             <>
-                
+
                 <div className="chat-container ">
-                <div className="user-container hide3">
+                    <div className="user-container hide1">
                         { props.profile.profiles.length > 0 ? (
                             props.profile.profiles.map(profile => (
                                 <Link to={`/chat/${profile.user._id}`} >
@@ -64,26 +60,16 @@ const Chat = props => {
                             
                         ):(<h4>No users found</h4>
                         )}
-
                     </div>
-                    
-                    <div className="line"></div>
-                    <div className="text-container hide4">
-                        <div className="messages">
-                        { messages ? messages.map( ({text,user,date})=> {
-                            if ( ! members[user] ) debugger;
-                            const { name, avatar } = members[user];
-                            return <div className="message">
-                                 <span className="message-name">{ name }:</span> { text } <span className="chat-date"><Moment  format='YYYY/MM/DD HH:mm'>{date}</Moment></span>
-                            </div>;
-                        }) : null }
+                    <div className="text-container hide2">
+                        <div className="messages" style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
+                            <h3 style={{color:"white"}}>click on the contact to start your Chat</h3>
                         </div>
-                            <div className="input-gruppe">
-                                <button className="send-btn" onClick={e=> send(text)}> Send</button>
-                                <input onChange={change} className="messag-input" placeholder="write something. . ."/>
-                            </div>
                     </div>
                 </div>
+
+
+                
             </>
             }
         </>
