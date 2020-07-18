@@ -1,10 +1,10 @@
-:root{
-    --dark-page-bg:#111111;
-    --dark-header-bg:#232323;
-    --light-page-bg:hsl(0, 100%, 100%);
-    --light-header-bg:hsl(0, 0%, 54%);
-     font-family: Arial, Helvetica, sans-serif;
-     
+:root {
+    --dark-page-bg: #111111;
+    --dark-header-bg: #232323;
+    --light-page-bg: hsl(0, 100%, 100%);
+    --light-header-bg: hsl(0, 0%, 54%);
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 body {
@@ -12,7 +12,7 @@ body {
     font-family: 'Montserrat';
 }
 
-.footer{
+.footer {
     width: 100%;
     height: 20vh;
     background: #263238;
@@ -51,6 +51,10 @@ body {
 .btn.wow-register {
     width: 35%;
     margin: auto;
+}
+
+.btn-primary {
+    background-color: #4c9aec;
 }
 
 .login-form-register {
@@ -178,7 +182,7 @@ body {
 }
 
 .profiles {
-    background-color: white;
+    background-color: #f0f2f5;
     padding: 3rem;
     border-radius: 5px;
     width: 90%;
@@ -197,11 +201,11 @@ path {
 
 .dci-student {
 
-    box-shadow: 0px 1px 6px #adadad;
+    box-shadow: 0px 1px 6px #a3cada;
     border-radius: 0.6rem;
     margin-top: 2rem !important;
     margin: 0.5rem;
-    background-color: #EEEEEE;
+    background-color: #ffffff;
 }
 
 .dci-student:hover {
@@ -261,6 +265,11 @@ img.head_size.img-fluid {
     padding: 0 10%;
 }
 
+.profile-grid {
+    background-color: #f0f2f5;
+
+}
+
 .skillp {
     color: #43a5f5;
     padding: 0 1rem 1rem 1rem;
@@ -291,9 +300,13 @@ img.head_size.img-fluid {
 
 .mb-5 {
     padding: 3rem;
-    
 
 }
+.mb-5.pb-4.lg{
+    width:55rem;
+    
+}
+
 
 .card-k {
     display: flex;
@@ -388,7 +401,7 @@ img.head_size.img-fluid {
 .social {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin: auto;
     width: 50%;
 }
@@ -454,9 +467,10 @@ img.head_size.img-fluid {
     width: 7vw;
     height: 7vw;
     margin-right: 1vw;
-    padding: 5px;
+    padding: 8px;
     border-radius: 50%;
-    background: white;
+    background: #efefef;
+    border:1px solid rgb(0, 119, 255);
 
 }
 
@@ -601,7 +615,7 @@ h4>a {
     display: none;
 }
 
-.messages{
+.messages {
     -ms-overflow-style: none;
     /* IE and Edge */
     scrollbar-width: none;
@@ -616,13 +630,15 @@ h4>a {
     color: white;
     margin-bottom: 5px;
 }
-.chat-date{
+
+.chat-date {
     display: block;
     font-size: 70%;
     color: gray;
     text-align: right;
 }
-.message-name{
+
+.message-name {
 
     color: #0094ff;
 }
@@ -632,35 +648,40 @@ h4>a {
     width: 6%;
     height: 1px;
 }
-.send-btn{
+
+.send-btn {
     color: white;
     background: blue;
     outline: none;
     border: none;
     border-radius: 0px 0px 0px 8px;
     padding: 3px 26px 3px 27px;
-    
+
 }
-.send-btn:hover{
+
+.send-btn:hover {
     background: rgb(54, 243, 63);
     cursor: pointer;
 }
+
 .send-btn:focus {
     outline: 0 !important;
 }
-.messag-input{
-    border-radius: 0px 0px  8px 0px;
+
+.messag-input {
+    border-radius: 0px 0px 8px 0px;
     width: 100%;
     border: solid gray 1px;
     outline: none;
     padding: 2px;
     border-left: none;
 }
+
 .messag-input:focus {
     outline: 0 !important;
 }
 
-.input-gruppe{
+.input-gruppe {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -861,14 +882,14 @@ h4>a {
 }
 
 .post-container {
-    background-color: white;
+    background-color: #f0f2f5;
     width: 100%;
     padding-bottom: 17px;
 }
 
 .post-card {
-    background: #eeeeee;
-    box-shadow: 0px 1px 6px #adadad;
+    background: #ffffff;
+    box-shadow: 0px 1px 6px #a3cada;
 
 }
 
@@ -1083,25 +1104,32 @@ textarea {
         padding: 1rem;
         margin-bottom: 2rem;
     }
-    .hide2{
-        display: none;
-    }
-    .hide1{
-        width: 100%;
-    }
 
-    .hide3{
-        display: none;
-    }
-    .hide4{
-        width: 100%;
-    }
-    .line{
+    .hide2 {
         display: none;
     }
 
+    .hide1 {
+        width: 100%;
+    }
+
+    .hide3 {
+        display: none;
+    }
+
+    .hide4 {
+        width: 100%;
+    }
+
+    .line {
+        display: none;
+    }
+
+<<<<<<< HEAD
 
     
+=======
+>>>>>>> ee1717d95d9278e11ef6dbb79f9073dc15f456f7
 
 
 

@@ -17,7 +17,7 @@ const Profile = ({getProfileById, profile:{profile,loading}, auth, match}) => {
             {profile === null || loading ? (
                 <Spinner />
             ) : (<>
-                    <div class="profile-grid">
+                    <div class="profile-grid pt-5">
                         <ProfileTop profile={profile}/>
 
                     </div>

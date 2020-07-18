@@ -27,7 +27,7 @@ const Dashboard = props => {
      if(props.profile.loading === true && props.profile === null){return <Spinner />}else {
          return(
             <>
-            <Container className="dashbourd-container">
+            <Container className="dashbourd-container pt-5">
             <Card style={{height:"40vh"}}>
                 <Card.Header style={{padding:"17px 0 17px 17px"}}>Welcome {props.auth && capitalize(props.auth.name)}</Card.Header>
                 <PostForm/>
