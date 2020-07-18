@@ -9,6 +9,7 @@ import Fac from '../fontawesome/facebook.svg'
 import Inst from '../fontawesome/instagram.svg'
 import Xing from '../fontawesome/xing.svg'
 import Img from './man 7.png'
+import Img2 from './woman-8.png'
 
 
 
@@ -87,14 +88,14 @@ const EditProfile = props => {
                             <Card className="blue-card">
                                 <Card.Body className="round-user d-flex justify-content-center">
                                     <div className="foto-user d-flex justify-content-centerd-flex align-items-center align-self-center ">
-                                        <img src={Img} className="user_size img-fluid"  alt="avatar"/>
+                                    <img src={props.auth.gender === 'Male' ? Img : Img2} className="user_size img-fluid" alt="avatar" />
                                     </div>
                                 </Card.Body>
                             </Card>
                         </div>
                         <Form.Group className="profile-form" controlId="exampleForm.ControlSelect1">
-                            <h2 className="profile-text">Create Your profile</h2>
-                            <p className="profile-text">Let`s get some information to make your profile stand out</p>
+                            <h2 className="profile-text">Edit Your profile</h2>
+                            
                             <Form.Control as="select" className="profileinput" name="status" value={status} onChange={e => onChange(e)}>
                                 <option>Select profesional status</option>
                                 <option>Developer</option>
@@ -206,7 +207,8 @@ const EditProfile = props => {
 }
 
 const mapStateToProps= state=>({
-    profile: state.profile
+    profile: state.profile,
+    auth: state.auth
 })
 
 

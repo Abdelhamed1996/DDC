@@ -22,14 +22,6 @@ const MyProfile = ({getCurrentProfile,deleteAccount, profile:{profile,loading}})
          return <CreateProfile/>
       } else if(profile && !loading){
               return(<>
-<<<<<<< HEAD
-                         <div class="profile-grid ">
-                             <ProfileTop profile={profile}/>
-                         </div>
-                         <div className="profile-btns">
-                         <Link to='/dashboard'><Button variant="secondary" >Back</Button></Link>
-                         <Link to='/edit-profile'><Button variant="primary">Edit Profile</Button></Link>
-=======
                         <div className="profile-containers">
                             <div class="profile-grid">
                                 <ProfileTop profile={profile}/>
@@ -39,7 +31,6 @@ const MyProfile = ({getCurrentProfile,deleteAccount, profile:{profile,loading}})
                             <Link to='/edit-profile' className="profile-link"><Button variant="primary">Edit Profile</Button></Link>
                             <Button variant="danger" onClick={()=> {deleteAccount();window.location.reload()}}>Delete My Account</Button>
                             </div>
->>>>>>> d881a4698f099309cd08e71595b85f5c284d1e34
                          </div>
                      </>)
           }

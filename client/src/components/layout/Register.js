@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { register } from '../../actions/auth'
+import Img from '../../images/SignUp.svg'
 
 
 
@@ -39,6 +40,7 @@ const Register = props => {
         <>
             <div className="text text-center text-white display-4  font-weight-bold">DCI Developer Community</div>
             <div className="form-div"   style={{paddingBottom:"5vw"}}>
+            
             <Form className=" Form1 p-3 mt-4  respnsiv_form2  respnsiv_form3 rounded " onSubmit={onSubmit}>
                 <h1 className="text-center mt-5 mb-3">Sign Up</h1>
                 <Form.Group controlId="formBasicEmail">
@@ -100,6 +102,7 @@ const Register = props => {
                 </Form.Group>
 
             </Form>
+            <img src={Img} alt="login"  className="loginImg"/>
             </div>
         </>
     );

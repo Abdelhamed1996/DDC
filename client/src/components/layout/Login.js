@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { login } from '../../actions/auth'
-import {Img} from '../../images/login.png'
+import Img from '../../images/login.svg'
 
 
 
@@ -46,7 +46,7 @@ const Login = props => {
         <>
             <div className="text text-center text-white display-4 font-weight-bold">DCI Developer Community</div>
             <div className="form-div"   style={{paddingBottom:"5vw"}}>
-                <img src={Img}/>
+                <img src={Img} alt="login"  className="loginImg"/>
             <Form className=" Form1 p-3  mt-4 respnsiv_form respnsiv_form3 rounded" onSubmit={onSubmit}>
                 <h1 className="text-center mt-5 mb-4">Sign in</h1>
                 <Form.Group controlId="formBasicEmail">
