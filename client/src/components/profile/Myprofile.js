@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Spinner from '../layout/Spiner'
 import ProfileTop from './ProfileTop'
-import { getCurrentProfile } from '../../actions/profile'
+import { getCurrentProfile , deleteAccount} from '../../actions/profile'
 import { Button, } from 'react-bootstrap'
 import PropTypes from 'prop-types'
 import CreateProfile from '../profile-forms/CreateProfile'
 
 
-const MyProfile = ({getCurrentProfile, profile:{profile,loading}}) => {
+const MyProfile = ({getCurrentProfile,deleteAccount, profile:{profile,loading}}) => {
      useEffect(() => {
         getCurrentProfile();
      },[getCurrentProfile]);
@@ -22,12 +22,15 @@ const MyProfile = ({getCurrentProfile, profile:{profile,loading}}) => {
          return <CreateProfile/>
       } else if(profile && !loading){
               return(<>
-                         <div class="profile-grid">
-                             <ProfileTop profile={profile}/>
-                         </div>
-                         <div className="profile-btns">
-                         <Link to='/dashboard'><Button variant="secondary" >Back</Button></Link>
-                         <Link to='/edit-profile'><Button variant="primary">Edit Profile</Button></Link>
+                        <div className="profile-containers">
+                            <div class="profile-grid">
+                                <ProfileTop profile={profile}/>
+                            </div>
+                            <div className="profile-btns">
+                            <Link to='/dashboard' className="profile-link"><Button variant="secondary" >Back</Button></Link>
+                            <Link to='/edit-profile' className="profile-link"><Button variant="primary">Edit Profile</Button></Link>
+                            <Button variant="danger" onClick={()=> {deleteAccount();window.location.reload()}}>Delete My Account</Button>
+                            </div>
                          </div>
                      </>)
           }
@@ -38,6 +41,7 @@ const MyProfile = ({getCurrentProfile, profile:{profile,loading}}) => {
  MyProfile.propTypes={
      profile: PropTypes.object.isRequired,
      getCurrentProfile: PropTypes.func.isRequired,
+     deleteAccount: PropTypes.func.isRequired,
      auth: PropTypes.object.isRequired  
  }
 
@@ -46,4 +50,4 @@ const mapStateToProps = state => ({
     auth: state.auth
 });
 
-export default connect(mapStateToProps, { getCurrentProfile })(MyProfile)
+export default connect(mapStateToProps, { getCurrentProfile,deleteAccount })(MyProfile)

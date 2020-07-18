@@ -8,6 +8,8 @@ const PostForm = ({addPost}) => {
     const [img,setImg]=useState('')
 
 
+
+
     
     return (
         <div className="post-form" >
@@ -45,9 +47,10 @@ const PostForm = ({addPost}) => {
 }
 
 PostForm.propTypes = {
-    addPost:PropTypes.func.isRequired
-
+    addPost:PropTypes.func.isRequired,
 }
+
+
 
 export default connect(null,{addPost})(PostForm)
 

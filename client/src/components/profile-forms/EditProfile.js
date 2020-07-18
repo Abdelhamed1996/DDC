@@ -69,6 +69,7 @@ const EditProfile = props => {
         e.preventDefault();
         props.createProfile(formData, props.history)
         props.history.push('/me')
+        window.location.reload()
     };
 
 

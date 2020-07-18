@@ -57,7 +57,8 @@ const ProfileTop = ({profile:{
                             ))}
                         </div>   
                     </div>
-                    <div className="about-me">
+
+                    {bio && (<div className="about-me">
                         <p >ABOUT ME</p>
                         <p style={{color: "gray"}}>{bio}</p>
                         <div className=" social">
@@ -92,7 +93,7 @@ const ProfileTop = ({profile:{
                         <div className="social">
                             
                         </div>
-                    </div> 
+                    </div>)}
                     {githubusername && (<ProfileGithub username={githubusername}/>)}
                 </Card>
 

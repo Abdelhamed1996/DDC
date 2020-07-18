@@ -245,6 +245,11 @@ img.head_size.img-fluid {
     margin: 0;
 }
 
+.profile-containers{
+    height: 100%;
+    padding-bottom: 2px;
+}
+
 .profile-skills {
     margin: 0;
     display: flex;
@@ -390,11 +395,26 @@ img.head_size.img-fluid {
 
 .profile-btns {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     margin: auto;
     margin-bottom: 2rem;
+    width: 30%;
+
 }
+.profile-btns > button, .profile-link{
+    margin-bottom: 15px;
+    width: 100%;
+
+}
+.profile-btns >  .profile-link> button{
+    width: 100%;
+
+}
+
+
+
 
 .dash-items {
     align-items: center;
@@ -806,6 +826,8 @@ h4>a {
         margin-top: 2rem !important;
     }
 
+
+
 }
 
 /*////////////////////////////////////////////////DCI Student LIST  for  MAX 700 px!!    END //////*/
@@ -990,6 +1012,10 @@ textarea {
     .date-m {
         font-size: 0.8rem;
     }
+    .profile-btns{
+        width: 100%;
+    }
+
 
 }
 
@@ -1073,6 +1099,8 @@ textarea {
     .line{
         display: none;
     }
+
+
     
 
 
