@@ -45,6 +45,7 @@ const CreateProfile = props => {
     const onSubmit = (e) => {
         e.preventDefault();
         props.createProfile(formData, props.history)
+        window.location.reload()
     };
 
 

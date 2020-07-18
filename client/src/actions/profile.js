@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_PROFILE,GET_PROFILES,PROFILE_ERROR,GET_REPOS} from './types';
+import { GET_PROFILE,GET_PROFILES,PROFILE_ERROR,GET_REPOS,ACCOUNT_DELETED,CLEAR_PROFILE} from './types';
 
 //Get current users profile
 
@@ -108,5 +108,23 @@ export const getGithubRepos = username => async dispatch => {
         type: PROFILE_ERROR,
         payload:{msg:err.response.statusText, status: err.response.status}
       });
+    }
+  };
+
+
+  export const deleteAccount = id => async dispatch => {
+    if (window.confirm('Are you sure? This can NOT be undone!')) {
+      try {
+        const res = await axios.delete('/api/profile');
+  
+        dispatch({ type: CLEAR_PROFILE });
+        dispatch({ type: ACCOUNT_DELETED });
+
+      } catch (err) {
+        dispatch({
+          type: PROFILE_ERROR,
+          payload: { msg: err.response.statusText, status: err.response.status }
+        });
+      }
     }
   };
