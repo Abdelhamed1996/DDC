@@ -36,7 +36,7 @@ const App = props => {
 
       <Router>
         <>
-        <section className='container-fluid p-0' style={!props.auth.isAuht ? {background:"#43a5f5"} :{background:"white",height:"100%"}}>
+        <section className='container-fluid p-0' style={!props.auth.isAuht ? {background:"#43a5f5"} :{background:"#f0f2f5",height:"100%"}}>
           <Nav />
 
 

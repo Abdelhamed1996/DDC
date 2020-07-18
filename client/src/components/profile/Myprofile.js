@@ -22,7 +22,7 @@ const MyProfile = ({getCurrentProfile, profile:{profile,loading}}) => {
          return <CreateProfile/>
       } else if(profile && !loading){
               return(<>
-                         <div class="profile-grid">
+                         <div class="profile-grid ">
                              <ProfileTop profile={profile}/>
                          </div>
                          <div className="profile-btns">
