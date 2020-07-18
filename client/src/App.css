@@ -299,7 +299,7 @@ img.head_size.img-fluid {
 }
 .mb-5.pb-4.lg{
     width:55rem;
-    
+
 }
 
 
@@ -868,6 +868,7 @@ h4>a {
 .post-card {
     background: #ffffff;
     box-shadow: 0px 1px 6px #a3cada;
+    border-left: 6px solid #03A9F4;
 
 }
 
