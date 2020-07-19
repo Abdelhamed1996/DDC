@@ -35,7 +35,7 @@ body {
 /*     Login start ////////////////////////////7////////*/
 
 
-.form-div{
+.form-div {
     padding-bottom: 5vw;
     display: flex;
     flex-direction: row;
@@ -43,7 +43,7 @@ body {
     width: 100%;
 }
 
-.loginImg{
+.loginImg {
     width: 50%;
 }
 
@@ -71,6 +71,7 @@ body {
 
 .btn-primary {
     background-color: #4c9aec;
+    box-shadow: 0px 4px 8px #35a5ff;
 }
 
 .login-form-register {
@@ -99,7 +100,7 @@ body {
 }
 
 .Form1 {
-    background: white;
+    background: #f6f8fa;
     margin: auto;
 }
 
@@ -129,7 +130,8 @@ body {
 
 
 .form-control {
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(238, 238, 238);
+    box-shadow: 0px 5px 20px rgb(212, 212, 212);
 
 }
 
@@ -268,6 +270,10 @@ img.head_size.img-fluid {
 
 }
 
+.badge-light {
+    background-color: #d6d4d4;
+}
+
 /*DCI Student LIST  END /////////////////////////////////////////////*/
 
 /*PROFILE TOP     Start /////////////////////////////////////////////*/
@@ -276,7 +282,7 @@ img.head_size.img-fluid {
     margin: 0;
 }
 
-.profile-containers{
+.profile-containers {
     height: 100%;
     padding-bottom: 2px;
 }
@@ -329,8 +335,9 @@ img.head_size.img-fluid {
     padding: 3rem;
 
 }
-.mb-5.pb-4.lg{
-    width:55rem;
+
+.mb-5.pb-4.lg {
+    width: 55rem;
 
 }
 
@@ -409,6 +416,7 @@ img.head_size.img-fluid {
     flex-direction: row;
     padding: 1rem;
     background: #42A5F5;
+    box-shadow: 0px 5px 10px #2196F3;
 
 }
 
@@ -443,12 +451,15 @@ img.head_size.img-fluid {
     width: 30%;
 
 }
-.profile-btns > button, .profile-link{
+
+.profile-btns>button,
+.profile-link {
     margin-bottom: 15px;
     width: 100%;
 
 }
-.profile-btns >  .profile-link> button{
+
+.profile-btns>.profile-link>button {
     width: 100%;
 
 }
@@ -497,7 +508,7 @@ img.head_size.img-fluid {
     padding: 8px;
     border-radius: 50%;
     background: #efefef;
-    border:1px solid rgb(0, 119, 255);
+    border: 1px solid rgb(0, 119, 255);
 
 }
 
@@ -569,7 +580,7 @@ h4>a {
     border-radius: 5px;
     box-shadow: 0px 1px 6px #a3cada;
     overflow: scroll;
-    
+
 }
 
 .user-container::-webkit-scrollbar {
@@ -595,7 +606,7 @@ h4>a {
     width: 100%;
     padding: 1px 1px 1px 10px;
     border-left: 4px solid #01a9f4;
-    
+
 
 
 }
@@ -615,8 +626,8 @@ h4>a {
 
 .chat-user {
     margin: auto auto auto 20px;
-    color:black;
-    font-weight:bold;
+    color: black;
+    font-weight: bold;
 
 }
 
@@ -626,7 +637,7 @@ h4>a {
     justify-content: flex-end;
     width: 72%;
     height: 100%;
-  
+
     overflow: hidden;
     padding: 10px;
 }
@@ -675,8 +686,9 @@ h4>a {
     font-weight: bold;
     font-size: 18px;
 }
-.message-name.span>text{
-    color:black;
+
+.message-name.span>text {
+    color: black;
 }
 
 .line {
@@ -1070,15 +1082,17 @@ textarea {
     .date-m {
         font-size: 0.8rem;
     }
-    .profile-btns{
+
+    .profile-btns {
         width: 100%;
     }
-    
-    .Form1{
+
+    .Form1 {
         max-width: 100%;
 
     }
-    .loginImg{
+
+    .loginImg {
         display: none;
     }
 
@@ -1167,7 +1181,7 @@ textarea {
     }
 
 
-    
+
 
 
 
