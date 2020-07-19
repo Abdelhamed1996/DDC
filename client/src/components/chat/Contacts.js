@@ -63,7 +63,7 @@ const Chat = props => {
                     </div>
                     <div className="text-container hide2">
                         <div className="messages" style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
-                            <h3 style={{color:"white"}}>click on the contact to start your Chat</h3>
+                            <h3 style={{color:"grey"}}>click on the contact to start your Chat</h3>
                         </div>
                     </div>
                 </div>

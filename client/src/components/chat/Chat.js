@@ -67,7 +67,7 @@ const Chat = props => {
 
                     </div>
                     
-                    <div className="line"></div>
+                    
                     <div className="text-container hide4">
                         <div className="messages">
                         { messages ? messages.map( ({text,user,date})=> {

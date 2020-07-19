@@ -540,9 +540,9 @@ h4>a {
     height: 100%;
     padding: 10px;
     border-radius: 5px;
+    box-shadow: 0px 1px 6px #a3cada;
     overflow: scroll;
-    border: solid 1px #42A5F5;
-    border-radius: 15px;
+    
 }
 
 .user-container::-webkit-scrollbar {
@@ -563,16 +563,18 @@ h4>a {
     align-items: center;
     align-content: center;
     margin-bottom: 10px;
-    border-radius: 50px;
-    background: gainsboro;
+    border-bottom: 1px solid rgb(202, 202, 202);
+    background: white;
     width: 100%;
-    padding: 3px;
+    padding: 6px;
+    border-left: 4px solid #01a9f4;
+    
 
 
 }
 
 .chat-user-container:hover {
-    background: rgb(54, 243, 63);
+    background: #467fda;
     cursor: pointer;
 }
 
@@ -585,7 +587,9 @@ h4>a {
 }
 
 .chat-user {
-    margin: auto auto auto 5px;
+    margin: auto auto auto 20px;
+    color:black;
+    font-weight:bold;
 
 }
 
@@ -595,8 +599,7 @@ h4>a {
     justify-content: flex-end;
     width: 72%;
     height: 100%;
-    border: solid 1px #42A5F5;
-    border-radius: 15px;
+  
     overflow: hidden;
     padding: 10px;
 }
@@ -604,10 +607,11 @@ h4>a {
 .messages {
     width: 100%;
     height: 100%;
-    background: gainsboro;
+    background: white;
     background-size: cover;
     border-radius: 5px 5px 0 0;
     padding: 17px;
+    box-shadow: 0px 1px 6px #a3cada;
     overflow: scroll;
 }
 
@@ -625,9 +629,9 @@ h4>a {
 .message {
     width: fit-content;
     border-radius: 15px;
-    background: rgb(54, 243, 63);
+    background: #e8ebef;
     padding: 5px 10px 5px 2vw;
-    color: white;
+    color: rgb(0, 0, 0);
     margin-bottom: 5px;
 }
 
@@ -640,7 +644,12 @@ h4>a {
 
 .message-name {
 
-    color: #0094ff;
+    color: #0074c7;
+    font-weight: bold;
+    font-size: 18px;
+}
+.message-name.span>text{
+    color:black;
 }
 
 .line {
@@ -651,7 +660,7 @@ h4>a {
 
 .send-btn {
     color: white;
-    background: blue;
+    background: #2196F3;
     outline: none;
     border: none;
     border-radius: 0px 0px 0px 8px;
