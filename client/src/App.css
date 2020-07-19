@@ -593,7 +593,7 @@ h4>a {
     border-bottom: 1px solid rgb(202, 202, 202);
     background: white;
     width: 100%;
-    padding: 6px;
+    padding: 1px 1px 1px 10px;
     border-left: 4px solid #01a9f4;
     
 
