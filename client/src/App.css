@@ -31,6 +31,22 @@ body {
     background-color: #42A5F5 !important;
 }
 
+
+/*     Login start ////////////////////////////7////////*/
+
+
+.form-div{
+    padding-bottom: 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.loginImg{
+    width: 50%;
+}
+
 .login-form {
     width: 100%;
     max-width: 20rem;
@@ -116,6 +132,17 @@ body {
     background-color: rgb(245, 245, 245);
 
 }
+
+
+
+/*      Login end ///////////////////////////////////////////7*/
+
+
+
+
+
+
+
 
 /*CARD CARD CREATE Your PROFILE///////////////////////////////*/
 .card-head {
@@ -1046,6 +1073,14 @@ textarea {
     .profile-btns{
         width: 100%;
     }
+    
+    .Form1{
+        max-width: 100%;
+
+    }
+    .loginImg{
+        display: none;
+    }
 
 
 }
@@ -1081,11 +1116,7 @@ textarea {
 }
 
 @media (max-width: 991px) {
-    .respnsiv_form3 {
 
-        max-width: 60%;
-        min-width: 100%;
-    }
 
     .profiles {
         margin: 0 !important;

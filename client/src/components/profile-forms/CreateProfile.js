@@ -8,6 +8,7 @@ import Fac from '../fontawesome/facebook.svg'
 import Inst from '../fontawesome/instagram.svg'
 import Xing from '../fontawesome/xing.svg'
 import Img from './man 7.png'
+import Img2 from './woman-8.png'
 
 
 const CreateProfile = props => {
@@ -48,9 +49,7 @@ const CreateProfile = props => {
         window.location.reload()
     };
 
-
-
-
+    console.log("props1", props)
     return (
         <>
             <Container>
@@ -63,7 +62,7 @@ const CreateProfile = props => {
                                 <Card className="blue-card">
                                 <Card.Body className="round-user d-flex justify-content-center">
                                     <div className="foto-user d-flex justify-content-centerd-flex align-items-center align-self-center ">
-                                        <img src={Img} className="user_size img-fluid" alt="avatar" />
+                                        <img src={props.auth.gender === 'Male' ? Img : Img2} className="user_size img-fluid" alt="avatar" />
                                     </div>
                                 </Card.Body>
                             </Card>
@@ -180,7 +179,9 @@ const CreateProfile = props => {
     )
 }
 
+const mapStateToProps = state => ({
+    auth: state.auth
+});
 
 
-
-export default connect(null, { createProfile })(CreateProfile)
+export default connect(mapStateToProps, { createProfile })(CreateProfile)
