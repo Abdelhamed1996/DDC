@@ -16,9 +16,11 @@ const Chat = props => {
     const [text,setText]         = React.useState("");
     const [messages,setMessages] = React.useState(false);
     const [members,setMembers]   = React.useState({});
+    
 
     const change = e => {
         setText(e.target.value);
+
     };
     const send = text => {
         axios.post(
@@ -40,7 +42,6 @@ const Chat = props => {
     {
     return s && s[0].toUpperCase() + s.slice(1);
     }
-
 
 
 
@@ -71,17 +72,16 @@ const Chat = props => {
                     <div className="text-container hide4">
                         <div className="messages">
                         { messages ? messages.map( ({text,user,date})=> {
-                            console.log("message user", user, "date", date, "text", text)
                             if ( ! members[user] ) return;
                             const { name, avatar } = members[user];
-                            return <div className="message">
+                            return <div className={props.auth._id === user ? "myMessage" : "message"}>
                                  <span className="message-name">{ name }:</span> { text } <span className="chat-date"><Moment  format='YYYY/MM/DD HH:mm'>{date}</Moment></span>
                             </div>;
                         }) : null }
                         </div>
                             <div className="input-gruppe">
-                                <button className="send-btn" onClick={e=> send(text)}> Send</button>
-                                <input onChange={change} className="messag-input" placeholder="write something. . ."/>
+                                <button className="send-btn" onClick={e=> {send(text); document.querySelector('.chat-container .messag-input').value = ''}}> Send</button>
+                                <input  onChange={change} className="messag-input" placeholder="write something. . ."/>
                             </div>
                     </div>
                 </div>
@@ -93,7 +93,8 @@ const Chat = props => {
 
 
 const mapStateToProps = state => ({
-    profile: state.profile
+    profile: state.profile,
+    auth: state.auth
 });
 
 

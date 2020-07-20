@@ -17,7 +17,7 @@ const Profiles = props => {
     {
     return s && s[0].toUpperCase() + s.slice(1);
     }
-
+    console.log("profiles", props.profile.profiles)
     return (
         <>
             {props.profile.loading ? <Spinner /> :
@@ -29,6 +29,7 @@ const Profiles = props => {
                         <p className="profiles-p1">Browse and connect with DCI students</p>
                     </div>
                     {props.profile.profiles.length > 0 ? (
+
                         props.profile.profiles.map(profile => (
                             <Container fluid className="dci-container" key={profile.user._id} >
                                <Row className="dci-student">

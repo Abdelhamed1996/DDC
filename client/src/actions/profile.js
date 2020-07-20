@@ -22,9 +22,6 @@ export const getCurrentProfile = () => async dispatch => {
 //Gett all profiles
 
 export const getProfiles = () => async dispatch => {
-
-
-   
     try {
         const res = await axios.get('/api/profile');
 
@@ -35,6 +32,7 @@ export const getProfiles = () => async dispatch => {
         });
 
     } catch (err) {
+        console.error(err)
         dispatch({
             type: PROFILE_ERROR,
             payload: { msg: err.response.statusText, status: err.response.status }

@@ -33,9 +33,9 @@ router.post('/direct_message', auth, async ( req, res ) => {
     const other = await User.findById(otherId);
     chat[channel].members[otherId] = { id:other.id, name:other.name, lastMessage: Date.now() };
   }
-  if ( text !== ''){
+  if ( text !== '' && text !== undefined){
     chat[channel].members[req.user.id] = { id, name, lastMessage: Date.now() };
-    chat[channel].messages.unshift({ user: req.user.id, text, date: Date.now() });
+    chat[channel].messages.push({ user: req.user.id, text, date: Date.now() });
     // console.log(channel, req.user.name, req.body );
   }
 
