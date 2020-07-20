@@ -33,7 +33,7 @@ const ProfileTop = ({profile:{
 
     return (
         <>
-            <Container className="pt-5 d-flex justify-content-center">
+            <Container className="profileTop d-flex justify-content-center">
                 <Card className="mb-5 pb-4 lg">
 
                         <Card className="card-profile" >
