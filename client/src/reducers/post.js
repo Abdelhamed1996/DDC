@@ -50,9 +50,10 @@ export default function (state = initialState, action) {
                 loading: false
             };
         case UPDATE_LIKES:
+            console.log("update likes", state)
             return {
                 ...state,
-                posts: state.post.map(post =>
+                posts: state.posts.map(post =>
                     post._id === payload.id ? { ...post, likes: payload.likes } : post),
                 loading: false
             }

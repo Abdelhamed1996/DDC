@@ -30,16 +30,17 @@ router.post('/direct_message', auth, async ( req, res ) => {
   if ( ! chat[channel] ){
     chat[channel] = { members:{}, messages:[] };
     chat[channel].members[req.user.id] = { id, name, lastMessage: Date.now() };
-    const other = User.findById(otherId);
+    const other = await User.findById(otherId);
     chat[channel].members[otherId] = { id:other.id, name:other.name, lastMessage: Date.now() };
-
   }
   if ( text !== ''){
     chat[channel].members[req.user.id] = { id, name, lastMessage: Date.now() };
     chat[channel].messages.unshift({ user: req.user.id, text, date: Date.now() });
     // console.log(channel, req.user.name, req.body );
   }
-  res.send(chat[channel]);
+
+
+  res.json(chat[channel]);
 });
 
 router.post('/message', auth, async ( req, res ) => {

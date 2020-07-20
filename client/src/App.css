@@ -1216,6 +1216,9 @@ textarea {
     color: white;
     text-decoration: none;
 }
+.NavLink:hover {
+    cursor: pointer;
+}
 
 .active {
     border: solid white 1px;

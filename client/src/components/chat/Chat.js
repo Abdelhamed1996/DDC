@@ -71,7 +71,8 @@ const Chat = props => {
                     <div className="text-container hide4">
                         <div className="messages">
                         { messages ? messages.map( ({text,user,date})=> {
-                            if ( ! members[user] ) debugger;
+                            console.log("message user", user, "date", date, "text", text)
+                            if ( ! members[user] ) return;
                             const { name, avatar } = members[user];
                             return <div className="message">
                                  <span className="message-name">{ name }:</span> { text } <span className="chat-date"><Moment  format='YYYY/MM/DD HH:mm'>{date}</Moment></span>

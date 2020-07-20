@@ -28,8 +28,8 @@ const PostItem = ({
                     <Card.Img src={img} className="post-img"></Card.Img> 
                     <div className="posts-bottoms">
                         <div className="like-div">
-                            <div onClick={e => {addLike(_id);window.location.reload()}} className="postBtn"><i class="far fa-thumbs-up d m-3" ></i></div><span>{likes.length}</span>
-                            <div onClick={e => {removeLike(_id);window.location.reload()}} className="postBtn"><i class="far fa-thumbs-down d m-3 "></i></div>
+                            <div onClick={e => {addLike(_id);}} className="postBtn"><i class="far fa-thumbs-up d m-3" ></i></div><span>{likes.length}</span>
+                            <div onClick={e => {removeLike(_id);}} className="postBtn"><i class="far fa-thumbs-down d m-3 "></i></div>
                         </div>
                         {!auth.loading && user === auth.user._id && (
                             <Button onClick={e => deletePost(_id)} variant="danger d  m-2">Delete</Button>

@@ -31,12 +31,13 @@ export const getPosts = () => async dispatch => {
 export const addLike = id => async dispatch => {
     try {
         const res = await axios.put(`/api/posts/like/${id}`);
-
+        console.log("like", res.data)
         dispatch({
             type: UPDATE_LIKES,
             payload: { id, likes: res.data }
         });
     } catch (err) {
+        console.error("like error:", err)
         dispatch({
             type: POST_ERROR,
             payload: { msg: err.response.statusText, status: err.response.status }
