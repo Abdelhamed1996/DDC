@@ -39,7 +39,7 @@ const Register = props => {
     return (
         <>
             <div className="text text-center text-white display-4  font-weight-bold">DCI Developer Community</div>
-            <div className="form-div"   style={{paddingBottom:"5vw"}}>
+            <div className="form-div"   style={{padding:"0 5px 5vw 5px"}}>
             
             <Form className=" Form1 p-3 mt-4  respnsiv_form2  respnsiv_form3 rounded " onSubmit={onSubmit}>
                 <h1 className="text-center mt-5 mb-3">Sign Up</h1>
