@@ -44,7 +44,7 @@ const Login = props => {
 
     return (
         <>
-            <div className="text text-center text-white display-4 font-weight-bold">DCI Developer Community</div>
+            <div className="text text-center text-white display-4 font-weight-bold">DCI Developers Community</div>
             <div className="form-div"   style={{paddingBottom:"5vw"}}>
                 <img src={Img} alt="login"  className="loginImg"/>
             <Form className=" Form1 p-3  mt-4 respnsiv_form respnsiv_form3 rounded" onSubmit={onSubmit}>
